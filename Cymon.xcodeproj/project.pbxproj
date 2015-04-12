@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E97D62D1AD78922004DD3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97D62C1AD78922004DD3D0 /* AppDelegate.swift */; };
+		5E97D62F1AD78922004DD3D0 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97D62E1AD78922004DD3D0 /* MenuController.swift */; };
+		5E97D6321AD78922004DD3D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6301AD78922004DD3D0 /* Main.storyboard */; };
+		5E97D6341AD78922004DD3D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6331AD78922004DD3D0 /* Images.xcassets */; };
+		5E97D6371AD78922004DD3D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6351AD78922004DD3D0 /* LaunchScreen.xib */; };
+		5E97D6431AD78922004DD3D0 /* CymonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97D6421AD78922004DD3D0 /* CymonTests.swift */; };
+		5E97D6591AD9EF5A004DD3D0 /* Lato-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D64F1AD9EF5A004DD3D0 /* Lato-Bla.ttf */; };
+		5E97D65A1AD9EF5A004DD3D0 /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6501AD9EF5A004DD3D0 /* Lato-BlaIta.ttf */; };
+		5E97D65B1AD9EF5A004DD3D0 /* Lato-Bol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6511AD9EF5A004DD3D0 /* Lato-Bol.ttf */; };
+		5E97D65C1AD9EF5A004DD3D0 /* Lato-BolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6521AD9EF5A004DD3D0 /* Lato-BolIta.ttf */; };
+		5E97D65D1AD9EF5A004DD3D0 /* Lato-Hai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6531AD9EF5A004DD3D0 /* Lato-Hai.ttf */; };
+		5E97D65E1AD9EF5A004DD3D0 /* Lato-HaiIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6541AD9EF5A004DD3D0 /* Lato-HaiIta.ttf */; };
+		5E97D65F1AD9EF5A004DD3D0 /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6551AD9EF5A004DD3D0 /* Lato-Lig.ttf */; };
+		5E97D6601AD9EF5A004DD3D0 /* Lato-LigIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6561AD9EF5A004DD3D0 /* Lato-LigIta.ttf */; };
+		5E97D6611AD9EF5A004DD3D0 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6571AD9EF5A004DD3D0 /* Lato-Reg.ttf */; };
+		5E97D6621AD9EF5A004DD3D0 /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6581AD9EF5A004DD3D0 /* Lato-RegIta.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E97D63D1AD78922004DD3D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E97D61F1AD78922004DD3D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E97D6261AD78922004DD3D0;
+			remoteInfo = Cymon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E97D6271AD78922004DD3D0 /* Cymon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cymon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E97D62B1AD78922004DD3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E97D62C1AD78922004DD3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E97D62E1AD78922004DD3D0 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		5E97D6311AD78922004DD3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E97D6331AD78922004DD3D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E97D6361AD78922004DD3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5E97D63C1AD78922004DD3D0 /* CymonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CymonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E97D6411AD78922004DD3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E97D6421AD78922004DD3D0 /* CymonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CymonTests.swift; sourceTree = "<group>"; };
+		5E97D64F1AD9EF5A004DD3D0 /* Lato-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bla.ttf"; sourceTree = "<group>"; };
+		5E97D6501AD9EF5A004DD3D0 /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlaIta.ttf"; sourceTree = "<group>"; };
+		5E97D6511AD9EF5A004DD3D0 /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.ttf"; sourceTree = "<group>"; };
+		5E97D6521AD9EF5A004DD3D0 /* Lato-BolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BolIta.ttf"; sourceTree = "<group>"; };
+		5E97D6531AD9EF5A004DD3D0 /* Lato-Hai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hai.ttf"; sourceTree = "<group>"; };
+		5E97D6541AD9EF5A004DD3D0 /* Lato-HaiIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HaiIta.ttf"; sourceTree = "<group>"; };
+		5E97D6551AD9EF5A004DD3D0 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Lig.ttf"; sourceTree = "<group>"; };
+		5E97D6561AD9EF5A004DD3D0 /* Lato-LigIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LigIta.ttf"; sourceTree = "<group>"; };
+		5E97D6571AD9EF5A004DD3D0 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
+		5E97D6581AD9EF5A004DD3D0 /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-RegIta.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E97D6241AD78922004DD3D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E97D6391AD78922004DD3D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E97D61E1AD78922004DD3D0 = {
+			isa = PBXGroup;
+			children = (
+				5E97D6291AD78922004DD3D0 /* Cymon */,
+				5E97D63F1AD78922004DD3D0 /* CymonTests */,
+				5E97D6281AD78922004DD3D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E97D6281AD78922004DD3D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D6271AD78922004DD3D0 /* Cymon.app */,
+				5E97D63C1AD78922004DD3D0 /* CymonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E97D6291AD78922004DD3D0 /* Cymon */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D64E1AD9EE19004DD3D0 /* Assets */,
+				5E97D64D1AD78B82004DD3D0 /* Controllers */,
+				5E97D64C1AD78B71004DD3D0 /* Models */,
+				5E97D62C1AD78922004DD3D0 /* AppDelegate.swift */,
+				5E97D62E1AD78922004DD3D0 /* MenuController.swift */,
+				5E97D6301AD78922004DD3D0 /* Main.storyboard */,
+				5E97D6331AD78922004DD3D0 /* Images.xcassets */,
+				5E97D6351AD78922004DD3D0 /* LaunchScreen.xib */,
+				5E97D62A1AD78922004DD3D0 /* Supporting Files */,
+			);
+			path = Cymon;
+			sourceTree = "<group>";
+		};
+		5E97D62A1AD78922004DD3D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D62B1AD78922004DD3D0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E97D63F1AD78922004DD3D0 /* CymonTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D6421AD78922004DD3D0 /* CymonTests.swift */,
+				5E97D6401AD78922004DD3D0 /* Supporting Files */,
+			);
+			path = CymonTests;
+			sourceTree = "<group>";
+		};
+		5E97D6401AD78922004DD3D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D6411AD78922004DD3D0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E97D64C1AD78B71004DD3D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E97D64D1AD78B82004DD3D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5E97D64E1AD9EE19004DD3D0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5E97D64F1AD9EF5A004DD3D0 /* Lato-Bla.ttf */,
+				5E97D6501AD9EF5A004DD3D0 /* Lato-BlaIta.ttf */,
+				5E97D6511AD9EF5A004DD3D0 /* Lato-Bol.ttf */,
+				5E97D6521AD9EF5A004DD3D0 /* Lato-BolIta.ttf */,
+				5E97D6531AD9EF5A004DD3D0 /* Lato-Hai.ttf */,
+				5E97D6541AD9EF5A004DD3D0 /* Lato-HaiIta.ttf */,
+				5E97D6551AD9EF5A004DD3D0 /* Lato-Lig.ttf */,
+				5E97D6561AD9EF5A004DD3D0 /* Lato-LigIta.ttf */,
+				5E97D6571AD9EF5A004DD3D0 /* Lato-Reg.ttf */,
+				5E97D6581AD9EF5A004DD3D0 /* Lato-RegIta.ttf */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E97D6261AD78922004DD3D0 /* Cymon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E97D6461AD78922004DD3D0 /* Build configuration list for PBXNativeTarget "Cymon" */;
+			buildPhases = (
+				5E97D6231AD78922004DD3D0 /* Sources */,
+				5E97D6241AD78922004DD3D0 /* Frameworks */,
+				5E97D6251AD78922004DD3D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cymon;
+			productName = Cymon;
+			productReference = 5E97D6271AD78922004DD3D0 /* Cymon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E97D63B1AD78922004DD3D0 /* CymonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E97D6491AD78922004DD3D0 /* Build configuration list for PBXNativeTarget "CymonTests" */;
+			buildPhases = (
+				5E97D6381AD78922004DD3D0 /* Sources */,
+				5E97D6391AD78922004DD3D0 /* Frameworks */,
+				5E97D63A1AD78922004DD3D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E97D63E1AD78922004DD3D0 /* PBXTargetDependency */,
+			);
+			name = CymonTests;
+			productName = CymonTests;
+			productReference = 5E97D63C1AD78922004DD3D0 /* CymonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E97D61F1AD78922004DD3D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Paul Zaich";
+				TargetAttributes = {
+					5E97D6261AD78922004DD3D0 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					5E97D63B1AD78922004DD3D0 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 5E97D6261AD78922004DD3D0;
+					};
+				};
+			};
+			buildConfigurationList = 5E97D6221AD78922004DD3D0 /* Build configuration list for PBXProject "Cymon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E97D61E1AD78922004DD3D0;
+			productRefGroup = 5E97D6281AD78922004DD3D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E97D6261AD78922004DD3D0 /* Cymon */,
+				5E97D63B1AD78922004DD3D0 /* CymonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E97D6251AD78922004DD3D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E97D6591AD9EF5A004DD3D0 /* Lato-Bla.ttf in Resources */,
+				5E97D6321AD78922004DD3D0 /* Main.storyboard in Resources */,
+				5E97D65C1AD9EF5A004DD3D0 /* Lato-BolIta.ttf in Resources */,
+				5E97D65B1AD9EF5A004DD3D0 /* Lato-Bol.ttf in Resources */,
+				5E97D6371AD78922004DD3D0 /* LaunchScreen.xib in Resources */,
+				5E97D6601AD9EF5A004DD3D0 /* Lato-LigIta.ttf in Resources */,
+				5E97D6621AD9EF5A004DD3D0 /* Lato-RegIta.ttf in Resources */,
+				5E97D65A1AD9EF5A004DD3D0 /* Lato-BlaIta.ttf in Resources */,
+				5E97D65E1AD9EF5A004DD3D0 /* Lato-HaiIta.ttf in Resources */,
+				5E97D6341AD78922004DD3D0 /* Images.xcassets in Resources */,
+				5E97D65D1AD9EF5A004DD3D0 /* Lato-Hai.ttf in Resources */,
+				5E97D65F1AD9EF5A004DD3D0 /* Lato-Lig.ttf in Resources */,
+				5E97D6611AD9EF5A004DD3D0 /* Lato-Reg.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E97D63A1AD78922004DD3D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E97D6231AD78922004DD3D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E97D62F1AD78922004DD3D0 /* MenuController.swift in Sources */,
+				5E97D62D1AD78922004DD3D0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E97D6381AD78922004DD3D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E97D6431AD78922004DD3D0 /* CymonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E97D63E1AD78922004DD3D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E97D6261AD78922004DD3D0 /* Cymon */;
+			targetProxy = 5E97D63D1AD78922004DD3D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E97D6301AD78922004DD3D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E97D6311AD78922004DD3D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E97D6351AD78922004DD3D0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E97D6361AD78922004DD3D0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E97D6441AD78922004DD3D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E97D6451AD78922004DD3D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E97D6471AD78922004DD3D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cymon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E97D6481AD78922004DD3D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cymon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5E97D64A1AD78922004DD3D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CymonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cymon.app/Cymon";
+			};
+			name = Debug;
+		};
+		5E97D64B1AD78922004DD3D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CymonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cymon.app/Cymon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E97D6221AD78922004DD3D0 /* Build configuration list for PBXProject "Cymon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E97D6441AD78922004DD3D0 /* Debug */,
+				5E97D6451AD78922004DD3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E97D6461AD78922004DD3D0 /* Build configuration list for PBXNativeTarget "Cymon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E97D6471AD78922004DD3D0 /* Debug */,
+				5E97D6481AD78922004DD3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E97D6491AD78922004DD3D0 /* Build configuration list for PBXNativeTarget "CymonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E97D64A1AD78922004DD3D0 /* Debug */,
+				5E97D64B1AD78922004DD3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E97D61F1AD78922004DD3D0 /* Project object */;
+}
