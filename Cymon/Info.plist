@@ -30,11 +30,18 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>UISupportedInterfaceOrientations</key>
+	<key>UIAppFonts</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>Lato-Bla.ttf</string>
+		<string>Lato-Blata.ttf</string>
+		<string>Lato-Bol.ttf</string>
+		<string>Lato-Bollta.ttf</string>
+		<string>Lato-Hai.ttf</string>
+		<string>Lato-Hailta.ttf</string>
+		<string>Lato-Lig.ttf</string>
+		<string>Lato-LigIta.ttf</string>
+		<string>Lato-Reg.ttf</string>
+		<string>Lato-RegIta.ttf</string>
 	</array>
 </dict>
 </plist>

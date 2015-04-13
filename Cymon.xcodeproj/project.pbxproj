@@ -23,6 +23,11 @@
 		5E97D6601AD9EF5A004DD3D0 /* Lato-LigIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6561AD9EF5A004DD3D0 /* Lato-LigIta.ttf */; };
 		5E97D6611AD9EF5A004DD3D0 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6571AD9EF5A004DD3D0 /* Lato-Reg.ttf */; };
 		5E97D6621AD9EF5A004DD3D0 /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E97D6581AD9EF5A004DD3D0 /* Lato-RegIta.ttf */; };
+		5EEE9F901ADB0B4600A4DA94 /* logo-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE9F8E1ADB0B4600A4DA94 /* logo-large.png */; };
+		5EEE9F931ADB0B7B00A4DA94 /* logo-large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE9F921ADB0B7B00A4DA94 /* logo-large@2x.png */; };
+		5EFCE68C1ADB5F1D00AF501A /* logo-large@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCE68B1ADB5F1D00AF501A /* logo-large@3x.png */; };
+		5EFCE68F1ADB7D3500AF501A /* menu-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCE68D1ADB7D3500AF501A /* menu-logo.png */; };
+		5EFCE6901ADB7D3500AF501A /* menu-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCE68E1ADB7D3500AF501A /* menu-logo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 		5E97D6271AD78922004DD3D0 /* Cymon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cymon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E97D62B1AD78922004DD3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E97D62C1AD78922004DD3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E97D62E1AD78922004DD3D0 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		5E97D62E1AD78922004DD3D0 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../MenuController.swift; sourceTree = "<group>"; };
 		5E97D6311AD78922004DD3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E97D6331AD78922004DD3D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E97D6361AD78922004DD3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +61,11 @@
 		5E97D6561AD9EF5A004DD3D0 /* Lato-LigIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LigIta.ttf"; sourceTree = "<group>"; };
 		5E97D6571AD9EF5A004DD3D0 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
 		5E97D6581AD9EF5A004DD3D0 /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-RegIta.ttf"; sourceTree = "<group>"; };
+		5EEE9F8E1ADB0B4600A4DA94 /* logo-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-large.png"; sourceTree = "<group>"; };
+		5EEE9F921ADB0B7B00A4DA94 /* logo-large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-large@2x.png"; sourceTree = "<group>"; };
+		5EFCE68B1ADB5F1D00AF501A /* logo-large@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-large@3x.png"; sourceTree = "<group>"; };
+		5EFCE68D1ADB7D3500AF501A /* menu-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-logo.png"; sourceTree = "<group>"; };
+		5EFCE68E1ADB7D3500AF501A /* menu-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-logo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +111,6 @@
 				5E97D64D1AD78B82004DD3D0 /* Controllers */,
 				5E97D64C1AD78B71004DD3D0 /* Models */,
 				5E97D62C1AD78922004DD3D0 /* AppDelegate.swift */,
-				5E97D62E1AD78922004DD3D0 /* MenuController.swift */,
 				5E97D6301AD78922004DD3D0 /* Main.storyboard */,
 				5E97D6331AD78922004DD3D0 /* Images.xcassets */,
 				5E97D6351AD78922004DD3D0 /* LaunchScreen.xib */,
@@ -145,6 +154,7 @@
 		5E97D64D1AD78B82004DD3D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E97D62E1AD78922004DD3D0 /* MenuController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		5E97D64E1AD9EE19004DD3D0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5EEE9F891ADA254600A4DA94 /* Images */,
 				5E97D64F1AD9EF5A004DD3D0 /* Lato-Bla.ttf */,
 				5E97D6501AD9EF5A004DD3D0 /* Lato-BlaIta.ttf */,
 				5E97D6511AD9EF5A004DD3D0 /* Lato-Bol.ttf */,
@@ -164,6 +175,18 @@
 				5E97D6581AD9EF5A004DD3D0 /* Lato-RegIta.ttf */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		5EEE9F891ADA254600A4DA94 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5EEE9F8E1ADB0B4600A4DA94 /* logo-large.png */,
+				5EEE9F921ADB0B7B00A4DA94 /* logo-large@2x.png */,
+				5EFCE68B1ADB5F1D00AF501A /* logo-large@3x.png */,
+				5EFCE68D1ADB7D3500AF501A /* menu-logo.png */,
+				5EFCE68E1ADB7D3500AF501A /* menu-logo@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +238,7 @@
 				TargetAttributes = {
 					5E97D6261AD78922004DD3D0 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = H7LL446M2U;
 					};
 					5E97D63B1AD78922004DD3D0 = {
 						CreatedOnToolsVersion = 6.3;
@@ -247,11 +271,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E97D6591AD9EF5A004DD3D0 /* Lato-Bla.ttf in Resources */,
+				5EEE9F901ADB0B4600A4DA94 /* logo-large.png in Resources */,
 				5E97D6321AD78922004DD3D0 /* Main.storyboard in Resources */,
 				5E97D65C1AD9EF5A004DD3D0 /* Lato-BolIta.ttf in Resources */,
+				5EFCE6901ADB7D3500AF501A /* menu-logo@2x.png in Resources */,
 				5E97D65B1AD9EF5A004DD3D0 /* Lato-Bol.ttf in Resources */,
 				5E97D6371AD78922004DD3D0 /* LaunchScreen.xib in Resources */,
+				5EEE9F931ADB0B7B00A4DA94 /* logo-large@2x.png in Resources */,
 				5E97D6601AD9EF5A004DD3D0 /* Lato-LigIta.ttf in Resources */,
+				5EFCE68C1ADB5F1D00AF501A /* logo-large@3x.png in Resources */,
+				5EFCE68F1ADB7D3500AF501A /* menu-logo.png in Resources */,
 				5E97D6621AD9EF5A004DD3D0 /* Lato-RegIta.ttf in Resources */,
 				5E97D65A1AD9EF5A004DD3D0 /* Lato-BlaIta.ttf in Resources */,
 				5E97D65E1AD9EF5A004DD3D0 /* Lato-HaiIta.ttf in Resources */,
@@ -404,9 +433,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Cymon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -414,9 +447,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Cymon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -473,6 +510,7 @@
 				5E97D6481AD78922004DD3D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E97D6491AD78922004DD3D0 /* Build configuration list for PBXNativeTarget "CymonTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +519,7 @@
 				5E97D64B1AD78922004DD3D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
