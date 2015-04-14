@@ -3,11 +3,16 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Lig.ttf">
+            <string>Lato-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MenuController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MenuController" id="vXZ-lx-hvc" customClass="MenuController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-hA-FP7">
+                                <rect key="frame" x="225" y="236" width="151" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="23d-Kj-EnI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.70196078429999997" green="0.65098039220000004" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xi3-o8-Qha" kind="show" id="lXk-AH-2a8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZVG-M8-GJR">
+                                <rect key="frame" x="258" y="48" width="85" height="87"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.14901960784313725" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="2c5-zm-7eq"/>
+                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="76v-O5-LLu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="P3d-hA-FP7" secondAttribute="bottom" constant="316" id="Vve-JZ-WQ9"/>
+                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="centerX" secondItem="P3d-hA-FP7" secondAttribute="centerX" id="bCY-AT-6yR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--GameController-->
+        <scene sceneID="eBe-Zp-vhd">
+            <objects>
+                <viewController title="GameController" id="Xi3-o8-Qha" customClass="GameController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8zY-0U-yZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="cdI-oP-J0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mnA-RR-5Zk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3s-Ib-x3D">
+                                <rect key="frame" x="230" y="256" width="140" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="PBF-47-wDr"/>
+                                </constraints>
+                                <state key="normal" image="menu-logo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="Xi3-o8-Qha" eventType="touchUpInside" id="QnH-BJ-4ep"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1137254902" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k3s-Ib-x3D" firstAttribute="centerX" secondItem="mnA-RR-5Zk" secondAttribute="centerX" id="1oD-HD-47x"/>
+                            <constraint firstItem="k3s-Ib-x3D" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="236" id="gGb-Z0-1C2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sv-m7-lv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="369"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="menu-logo.png" width="85" height="87"/>
+    </resources>
 </document>
