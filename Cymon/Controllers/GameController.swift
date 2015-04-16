@@ -10,39 +10,46 @@ import UIKit
 
 class GameController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+    countDown()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
+  @IBOutlet weak var gameScore: UILabel!
+
+  @IBOutlet weak var gameStartTimeRemaining: UILabel!
+
+  @IBAction func cancel() {
+    var refreshAlert = UIAlertController(title: "Refresh", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    refreshAlert.addAction(UIAlertAction(title: "Leave", style: .Default, handler: { (action: UIAlertAction!) in
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }))
+    
+    refreshAlert.addAction(UIAlertAction(title: "Stay", style: .Default, handler: { (action: UIAlertAction!) in
+        println("Handle Cancel Logic here")
+    }))
+    
+    presentViewController(refreshAlert, animated: true, completion: nil)
+  }
+  
+  func countDown() {
+    let count = gameStartTimeRemaining.text!
+    var newCount = count.toInt()! - 1
+    
+    if (newCount > 0 ) {
+      gameStartTimeRemaining.text = "\(newCount)"
+      NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "countDown", userInfo: nil, repeats: false)
+    } else {
+      gameStartTimeRemaining.hidden = true
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @IBAction func cancel() {
-        var refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
-            println("Handle Cancel Logic here")
-        }))
-        
-        presentViewController(refreshAlert, animated: true, completion: nil)
-    }
-//    @IBAction func goBack(sender: UIButton) {
-//
-//    }
-    
-    
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        hello()
-//    }
+  }
 
 }
 

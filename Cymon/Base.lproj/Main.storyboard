@@ -11,6 +11,9 @@
         <mutableArray key="Lato-Lig.ttf">
             <string>Lato-Light</string>
         </mutableArray>
+        <mutableArray key="Lato-Reg.ttf">
+            <string>Lato-Regular</string>
+        </mutableArray>
     </customFonts>
     <scenes>
         <!--MenuController-->
@@ -75,7 +78,7 @@
                                     <action selector="cancel" destination="Xi3-o8-Qha" eventType="touchUpInside" id="gxm-Gp-bFt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-nx-KbP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-nx-KbP">
                                 <rect key="frame" x="542" y="28" width="42" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="We0-nB-Mej"/>
@@ -84,15 +87,31 @@
                                 <color key="textColor" red="0.70196078431372544" green="0.65098039215686276" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPk-yt-9VR">
+                                <rect key="frame" x="206" y="253" width="188" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="i9y-Qc-b4f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="64"/>
+                                <color key="textColor" red="0.97647058823529409" green="0.90980392156862744" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.1137254902" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="8" id="6MD-1V-9Ub"/>
                             <constraint firstItem="mBX-dS-ZAG" firstAttribute="leading" secondItem="mnA-RR-5Zk" secondAttribute="leadingMargin" id="8dL-kg-WXj"/>
+                            <constraint firstItem="iPk-yt-9VR" firstAttribute="centerX" secondItem="mnA-RR-5Zk" secondAttribute="centerX" id="GD4-s2-nRW"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="trailing" secondItem="mnA-RR-5Zk" secondAttribute="trailingMargin" id="Xfd-uV-P0f"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="top" secondItem="mBX-dS-ZAG" secondAttribute="top" id="sqK-h8-raQ"/>
+                            <constraint firstItem="iPk-yt-9VR" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="233" id="wYJ-V5-eK1"/>
+                            <constraint firstItem="iPk-yt-9VR" firstAttribute="centerY" secondItem="mnA-RR-5Zk" secondAttribute="centerY" id="ySZ-p0-IHV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameScore" destination="Ya8-nx-KbP" id="iWd-E8-bUp"/>
+                        <outlet property="gameStartTimeRemaining" destination="iPk-yt-9VR" id="JyZ-WU-k5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sv-m7-lv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
