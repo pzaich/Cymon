@@ -9,7 +9,16 @@
 import Foundation
 
 class Game {
-    init(level: Int) {
-        
-    }
+  init() {
+    
+  }
+  
+  var nextLevel:Int = 1
+  var currentLevel:Level? = nil
+  let duration:Int = 30
+  
+  func start()
+  {
+    self.currentLevel = Level(level: nextLevel)
+  }
 }

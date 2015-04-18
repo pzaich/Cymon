@@ -14,6 +14,7 @@ class GameController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     countDown()
+    toggleGameElements()
   }
 
   override func didReceiveMemoryWarning() {
@@ -22,11 +23,15 @@ class GameController: UIViewController {
   }
 
   @IBOutlet weak var gameScore: UILabel!
-
   @IBOutlet weak var gameStartTimeRemaining: UILabel!
-
+  @IBOutlet weak var homeButton: UIButton!
+  
+  @IBOutlet weak var gameTimeRemaining: UILabel!
+  
+  var game:Game = Game()
+  
   @IBAction func cancel() {
-    var refreshAlert = UIAlertController(title: "Refresh", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
+    var refreshAlert = UIAlertController(title: "Quit game", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
     
     refreshAlert.addAction(UIAlertAction(title: "Leave", style: .Default, handler: { (action: UIAlertAction!) in
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -39,6 +44,22 @@ class GameController: UIViewController {
     presentViewController(refreshAlert, animated: true, completion: nil)
   }
   
+  
+  func toggleGameElements() {
+    gameScore.hidden  = !gameScore.hidden
+    homeButton.hidden = !homeButton.hidden
+    gameTimeRemaining.hidden = !gameTimeRemaining.hidden
+  }
+  
+  func setChallenge() {
+    
+  }
+  
+  func initializeGame() {
+    game.start()
+    toggleGameElements()
+  }
+  
   func countDown() {
     let count = gameStartTimeRemaining.text!
     var newCount = count.toInt()! - 1
@@ -47,6 +68,7 @@ class GameController: UIViewController {
       gameStartTimeRemaining.text = "\(newCount)"
       NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "countDown", userInfo: nil, repeats: false)
     } else {
+      initializeGame()
       gameStartTimeRemaining.hidden = true
     }
   }

@@ -10,6 +10,26 @@ import Foundation
 
 class Level {
   init(level: Int) {
-    
+    self.level = level
   }
+
+  var level:Int
+  var levelDuration:Int = 60
+  var currentChallenge:Challenge? = nil
+  
+  lazy var challenges:[Challenge] = {
+    return []
+  }()
+  
+  lazy var scoreMultiplier:Double =
+  {
+    let multiplier:Double =  1.0 + (Double(self.level) * 0.1)
+    return multiplier
+  }()
+  
+  func begin()
+  {
+//    self.challenges.
+  }
+  
 }
