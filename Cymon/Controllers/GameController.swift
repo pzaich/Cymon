@@ -13,7 +13,7 @@ class GameController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    countDown()
+    gameStartCountDown()
     toggleGameElements()
   }
 
@@ -30,7 +30,8 @@ class GameController: UIViewController {
   
   var game:Game = Game()
   
-  @IBAction func cancel() {
+  @IBAction func cancel()
+  {
     var refreshAlert = UIAlertController(title: "Quit game", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
     
     refreshAlert.addAction(UIAlertAction(title: "Leave", style: .Default, handler: { (action: UIAlertAction!) in
@@ -45,33 +46,63 @@ class GameController: UIViewController {
   }
   
   
-  func toggleGameElements() {
+  func toggleGameElements()
+  {
     gameScore.hidden  = !gameScore.hidden
     homeButton.hidden = !homeButton.hidden
     gameTimeRemaining.hidden = !gameTimeRemaining.hidden
   }
   
-  func setChallenge() {
+  func setChallenge()
+  {
     
   }
   
-  func initializeGame() {
+  func initializeGame()
+  {
     game.start()
     toggleGameElements()
+    gameTimeRemaining.text = "\(game.duration)"
+    gameTimeRemainingCountDown()
   }
   
-  func countDown() {
-    let count = gameStartTimeRemaining.text!
+  private func countDown(label:UILabel, timer:() -> Void, callback:() -> Void)
+  {
+    let count = label.text!
     var newCount = count.toInt()! - 1
     
     if (newCount > 0 ) {
-      gameStartTimeRemaining.text = "\(newCount)"
-      NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "countDown", userInfo: nil, repeats: false)
+      label.text = "\(newCount)"
+      timer()
     } else {
-      initializeGame()
-      gameStartTimeRemaining.hidden = true
+      callback()
     }
   }
+  
+  func gameTimeRemainingCountDown()
+  {
+    countDown(gameTimeRemaining,
+      timer: { () in
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameTimeRemainingCountDown", userInfo: nil, repeats: false)
+      },
+      callback: { () in
+        println("finished")
+    })
+  }
+
+  
+  func gameStartCountDown()
+  {
+    countDown(gameStartTimeRemaining,
+      timer: { () in
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameStartCountDown", userInfo: nil, repeats: false)
+      },
+      callback: { () in
+        self.initializeGame()
+        self.gameStartTimeRemaining.hidden = true
+    })
+  }
+
 
 }
 

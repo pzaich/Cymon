@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -84,12 +84,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57z-qH-Mm4">
-                                <rect key="frame" x="16" y="170" width="568" height="276"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="230"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBX-dS-ZAG">
                                 <rect key="frame" x="16" y="28" width="28" height="29"/>
                                 <state key="normal" image="logo-mini.png">
@@ -117,25 +111,31 @@
                                 <color key="textColor" red="0.70196078431372544" green="0.65098039215686276" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-uz-dGf">
+                                <rect key="frame" x="21" y="162" width="568" height="276"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="230"/>
+                                <color key="textColor" red="0.70196078431372544" green="0.65098039215686276" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.1137254902" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="57z-qH-Mm4" firstAttribute="leading" secondItem="mBX-dS-ZAG" secondAttribute="leading" id="4gU-H6-fk9"/>
-                            <constraint firstItem="cdI-oP-J0g" firstAttribute="top" secondItem="57z-qH-Mm4" secondAttribute="bottom" constant="154" id="68f-GX-Knv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b1O-uz-dGf" secondAttribute="trailing" constant="-5" id="37O-7Z-VP5"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="8" id="6MD-1V-9Ub"/>
                             <constraint firstItem="mBX-dS-ZAG" firstAttribute="leading" secondItem="mnA-RR-5Zk" secondAttribute="leadingMargin" id="8dL-kg-WXj"/>
                             <constraint firstItem="iPk-yt-9VR" firstAttribute="centerX" secondItem="mnA-RR-5Zk" secondAttribute="centerX" id="GD4-s2-nRW"/>
-                            <constraint firstItem="57z-qH-Mm4" firstAttribute="trailing" secondItem="Ya8-nx-KbP" secondAttribute="trailing" id="O23-hM-PpU"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="trailing" secondItem="mnA-RR-5Zk" secondAttribute="trailingMargin" id="Xfd-uV-P0f"/>
+                            <constraint firstItem="b1O-uz-dGf" firstAttribute="centerY" secondItem="iPk-yt-9VR" secondAttribute="centerY" id="iyu-Ix-A1l"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="top" secondItem="mBX-dS-ZAG" secondAttribute="top" id="sqK-h8-raQ"/>
                             <constraint firstItem="iPk-yt-9VR" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="233" id="wYJ-V5-eK1"/>
+                            <constraint firstItem="b1O-uz-dGf" firstAttribute="leading" secondItem="mnA-RR-5Zk" secondAttribute="leadingMargin" constant="5" id="xAh-ar-o1B"/>
                             <constraint firstItem="iPk-yt-9VR" firstAttribute="centerY" secondItem="mnA-RR-5Zk" secondAttribute="centerY" id="ySZ-p0-IHV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameScore" destination="Ya8-nx-KbP" id="iWd-E8-bUp"/>
                         <outlet property="gameStartTimeRemaining" destination="iPk-yt-9VR" id="JyZ-WU-k5F"/>
-                        <outlet property="gameTimeRemaining" destination="iPk-yt-9VR" id="9zf-SL-GfL"/>
+                        <outlet property="gameTimeRemaining" destination="b1O-uz-dGf" id="F7I-yk-Vpy"/>
                         <outlet property="homeButton" destination="mBX-dS-ZAG" id="ZgT-fe-ZaP"/>
                     </connections>
                 </viewController>

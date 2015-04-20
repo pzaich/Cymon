@@ -15,7 +15,7 @@ class Game {
   
   var nextLevel:Int = 1
   var currentLevel:Level? = nil
-  let duration:Int = 30
+  let duration:Int = 60
   
   func start()
   {
