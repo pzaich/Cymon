@@ -28,6 +28,8 @@ class GameController: UIViewController {
   
   @IBOutlet weak var gameTimeRemaining: UILabel!
   
+  @IBOutlet weak var challengeButton: UIButton!
+  
   var game:Game = Game()
   
   @IBAction func cancel()
@@ -45,6 +47,9 @@ class GameController: UIViewController {
     presentViewController(refreshAlert, animated: true, completion: nil)
   }
   
+  @IBAction func didChallenge(sender: UIButton) {
+    println("did challenge")
+  }
   
   func toggleGameElements()
   {
