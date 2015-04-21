@@ -28,8 +28,9 @@ class GameController: UIViewController {
   
   @IBOutlet weak var gameTimeRemaining: UILabel!
   
-  @IBOutlet weak var challengeButton: UIButton!
+  @IBOutlet weak var challengeBoard: UIView!
   
+  @IBOutlet weak var challengeLabel: UILabel!
   let game:Game = Game()
   
   @IBAction func cancel()
@@ -56,12 +57,46 @@ class GameController: UIViewController {
     gameScore.hidden  = !gameScore.hidden
     homeButton.hidden = !homeButton.hidden
     gameTimeRemaining.hidden = !gameTimeRemaining.hidden
-    challengeButton.hidden = !challengeButton.hidden
   }
   
   func setChallenge()
   {
-    
+    if let nextChallenge = game.nextChallenge() {
+      
+      challengeLabel.text = nextChallenge.gestureInstruction
+      
+      switch nextChallenge.gesture {
+      case "tap":
+        println("tap")
+        let gestureRecognizer = UITapGestureRecognizer()
+        gestureRecognizer.addTarget(self, action: "onGestureSuccess")
+        challengeBoard.addGestureRecognizer(gestureRecognizer)
+      default: break
+      }
+    } else {
+      println("should call: level won!")
+    }
+  }
+  
+  func onGestureSuccess()
+  {
+    println("gesture success")
+    appendScore(game.currentChallenge!)
+    removeOldGestures()
+    setChallenge()
+    println("\(game.currentLevel!.challenges.count)")
+  }
+  
+  func removeOldGestures() {
+    for recognizer in challengeBoard.gestureRecognizers! {
+      challengeBoard.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+    }
+  }
+  
+  func appendScore(challenge: Challenge)
+  {
+    var score:Int = gameScore.text!.toInt()!
+    gameScore.text = "\(score + game.currentLevel!.challengeScore)"
   }
   
   func initializeGame()
@@ -70,6 +105,30 @@ class GameController: UIViewController {
     toggleGameElements()
     gameTimeRemaining.text = "\(game.duration)"
     gameTimeRemainingCountDown()
+    setChallenge()
+  }
+  
+  func gameTimeRemainingCountDown()
+  {
+    countDown(gameTimeRemaining,
+      timer: { () in
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameTimeRemainingCountDown", userInfo: nil, repeats: false)
+      },
+      callback: { () in
+        println("game Over")
+    })
+  }
+  
+  func gameStartCountDown()
+  {
+    countDown(gameStartTimeRemaining,
+      timer: { () in
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameStartCountDown", userInfo: nil, repeats: false)
+      },
+      callback: { () in
+        self.initializeGame()
+        self.gameStartTimeRemaining.hidden = true
+    })
   }
   
   private func countDown(label:UILabel, timer:() -> Void, callback:() -> Void)
@@ -85,31 +144,4 @@ class GameController: UIViewController {
     }
   }
   
-  func gameTimeRemainingCountDown()
-  {
-    countDown(gameTimeRemaining,
-      timer: { () in
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameTimeRemainingCountDown", userInfo: nil, repeats: false)
-      },
-      callback: { () in
-        println("finished")
-    })
-  }
-
-  
-  func gameStartCountDown()
-  {
-    countDown(gameStartTimeRemaining,
-      timer: { () in
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameStartCountDown", userInfo: nil, repeats: false)
-      },
-      callback: { () in
-        self.initializeGame()
-        self.gameStartTimeRemaining.hidden = true
-    })
-  }
-
-
 }
-
-

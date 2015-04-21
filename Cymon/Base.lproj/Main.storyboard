@@ -114,31 +114,36 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-uz-dGf">
                                 <rect key="frame" x="21" y="162" width="568" height="276"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="230"/>
-                                <color key="textColor" red="0.18431372549019609" green="0.17254901960784313" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.21176470588235294" green="0.20000000000000001" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-Up-7jS">
-                                <rect key="frame" x="16" y="65" width="568" height="515"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="swipe-up.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didChallenge:" destination="Xi3-o8-Qha" eventType="touchDragInside" id="mji-nT-Nh0"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbs-WL-WhR">
+                                <rect key="frame" x="16" y="80" width="568" height="500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPI-Y9-Jka">
+                                        <rect key="frame" x="263" y="330" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.95686274509803926" green="0.8901960784313725" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SPI-Y9-Jka" firstAttribute="centerX" secondItem="Fbs-WL-WhR" secondAttribute="centerX" id="24z-ER-rAu"/>
+                                    <constraint firstItem="SPI-Y9-Jka" firstAttribute="leading" secondItem="Fbs-WL-WhR" secondAttribute="leading" constant="263" id="2jf-Xe-0p4"/>
+                                    <constraint firstItem="SPI-Y9-Jka" firstAttribute="leading" secondItem="Fbs-WL-WhR" secondAttribute="leading" constant="263" id="SCE-bJ-klE"/>
+                                    <constraint firstAttribute="bottom" secondItem="SPI-Y9-Jka" secondAttribute="bottom" constant="149" id="T3o-fK-dvI"/>
+                                    <constraint firstAttribute="bottom" secondItem="SPI-Y9-Jka" secondAttribute="bottom" constant="149" id="cfC-ur-Fyg"/>
+                                    <constraint firstItem="SPI-Y9-Jka" firstAttribute="top" secondItem="Fbs-WL-WhR" secondAttribute="top" constant="330" id="q3t-Ve-Q0t"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.1137254902" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="b1O-uz-dGf" secondAttribute="trailing" constant="-5" id="37O-7Z-VP5"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="8" id="6MD-1V-9Ub"/>
-                            <constraint firstItem="0bH-Up-7jS" firstAttribute="leading" secondItem="mBX-dS-ZAG" secondAttribute="leading" id="6dg-6Q-xmn"/>
                             <constraint firstItem="mBX-dS-ZAG" firstAttribute="leading" secondItem="mnA-RR-5Zk" secondAttribute="leadingMargin" id="8dL-kg-WXj"/>
-                            <constraint firstAttribute="bottom" secondItem="0bH-Up-7jS" secondAttribute="bottom" constant="20" symbolic="YES" id="Fd4-L2-auW"/>
                             <constraint firstItem="iPk-yt-9VR" firstAttribute="centerX" secondItem="mnA-RR-5Zk" secondAttribute="centerX" id="GD4-s2-nRW"/>
-                            <constraint firstItem="0bH-Up-7jS" firstAttribute="trailing" secondItem="Ya8-nx-KbP" secondAttribute="trailing" id="Vqq-3r-Bfd"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="trailing" secondItem="mnA-RR-5Zk" secondAttribute="trailingMargin" id="Xfd-uV-P0f"/>
-                            <constraint firstItem="0bH-Up-7jS" firstAttribute="top" secondItem="Ya8-nx-KbP" secondAttribute="bottom" constant="8" symbolic="YES" id="bTL-q4-8Iy"/>
                             <constraint firstItem="b1O-uz-dGf" firstAttribute="centerY" secondItem="iPk-yt-9VR" secondAttribute="centerY" id="iyu-Ix-A1l"/>
                             <constraint firstItem="Ya8-nx-KbP" firstAttribute="top" secondItem="mBX-dS-ZAG" secondAttribute="top" id="sqK-h8-raQ"/>
                             <constraint firstItem="iPk-yt-9VR" firstAttribute="top" secondItem="8zY-0U-yZC" secondAttribute="bottom" constant="233" id="wYJ-V5-eK1"/>
@@ -147,7 +152,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="challengeButton" destination="0bH-Up-7jS" id="P5g-sf-myE"/>
+                        <outlet property="challengeBoard" destination="Fbs-WL-WhR" id="RaC-vH-406"/>
+                        <outlet property="challengeLabel" destination="SPI-Y9-Jka" id="b0k-KL-LDU"/>
                         <outlet property="gameScore" destination="Ya8-nx-KbP" id="iWd-E8-bUp"/>
                         <outlet property="gameStartTimeRemaining" destination="iPk-yt-9VR" id="JyZ-WU-k5F"/>
                         <outlet property="gameTimeRemaining" destination="b1O-uz-dGf" id="F7I-yk-Vpy"/>
@@ -162,6 +168,5 @@
     <resources>
         <image name="logo-mini.png" width="28" height="29"/>
         <image name="menu-logo.png" width="85" height="87"/>
-        <image name="swipe-up.png" width="131" height="163"/>
     </resources>
 </document>

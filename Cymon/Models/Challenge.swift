@@ -16,7 +16,9 @@ class Challenge {
   //  challengeImage
   //  isCompleted
   
-  var isCompleted:Bool = false;
-  var difficultyMultiplier:Double = 1.0;
-  var challengeImage:String = "";
+//  var isCompleted:Bool = false
+  let difficultyMultiplier:Double = 1.0
+//  let challengeImage:String
+  let gesture:String = "tap"
+  let gestureInstruction = "Tap"
 }

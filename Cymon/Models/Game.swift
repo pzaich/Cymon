@@ -14,11 +14,23 @@ class Game {
   }
   
   var nextLevel:Int = 1
-  var currentLevel:Level? = nil
+  var currentLevel:Level?
+  var currentChallenge:Challenge?
+
   let duration:Int = 60
   
   func start()
   {
     self.currentLevel = Level(level: nextLevel)
+  }
+  
+  func nextChallenge() -> Challenge?
+  {
+    if currentLevel!.challenges.count > 0 {
+      self.currentChallenge = currentLevel!.challenges.removeAtIndex(0)
+    } else {
+      self.currentChallenge = nil
+    }
+    return self.currentChallenge
   }
 }
