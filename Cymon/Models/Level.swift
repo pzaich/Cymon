@@ -18,7 +18,11 @@ class Level {
   var currentChallenge:Challenge? = nil
   
   lazy var challenges:[Challenge] = {
-    return []
+    var placeholder:[Challenge] = []
+    for i in 1...50 {
+      placeholder.append(Challenge())
+    }
+    return placeholder
   }()
   
   lazy var scoreMultiplier:Double =

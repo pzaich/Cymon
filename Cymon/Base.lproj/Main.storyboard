@@ -20,7 +20,7 @@
         <!--MenuController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="MenuController" id="vXZ-lx-hvc" customClass="MenuController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MenuController" modalTransitionStyle="crossDissolve" id="vXZ-lx-hvc" customClass="MenuController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -75,7 +75,7 @@
         <!--GameController-->
         <scene sceneID="eBe-Zp-vhd">
             <objects>
-                <viewController title="GameController" id="Xi3-o8-Qha" customClass="GameController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GameController" modalTransitionStyle="crossDissolve" id="Xi3-o8-Qha" customClass="GameController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8zY-0U-yZC"/>
                         <viewControllerLayoutGuide type="bottom" id="cdI-oP-J0g"/>

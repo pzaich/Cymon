@@ -30,7 +30,7 @@ class GameController: UIViewController {
   
   @IBOutlet weak var challengeButton: UIButton!
   
-  var game:Game = Game()
+  let game:Game = Game()
   
   @IBAction func cancel()
   {
@@ -56,6 +56,7 @@ class GameController: UIViewController {
     gameScore.hidden  = !gameScore.hidden
     homeButton.hidden = !homeButton.hidden
     gameTimeRemaining.hidden = !gameTimeRemaining.hidden
+    challengeButton.hidden = !challengeButton.hidden
   }
   
   func setChallenge()

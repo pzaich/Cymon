@@ -15,4 +15,8 @@ class Challenge {
   //  multiplier
   //  challengeImage
   //  isCompleted
+  
+  var isCompleted:Bool = false;
+  var difficultyMultiplier:Double = 1.0;
+  var challengeImage:String = "";
 }
