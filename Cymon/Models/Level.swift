@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Dollar
 
 class Level {
   init(level: Int) {
@@ -19,10 +20,29 @@ class Level {
   
   lazy var challenges:[Challenge] = {
     var placeholder:[Challenge] = []
-    for i in 1...2 {
-      placeholder.append(Challenge())
+    for i in 1...50 {
+      if i % 2 == 0 {
+        placeholder.append(Challenge(level: self, type: "tap"))
+      } else {
+        placeholder.append(Challenge(level: self, type: "pinch"))
+      }
     }
-    return placeholder
+
+    return $.shuffle(placeholder)
+  }()
+  
+  private lazy var challengeDistribution:[String:Double] = {
+    var distribution:[String:Double]?
+    switch self.level {
+    case 1:
+      distribution = [
+        "tap": 0.5,
+        "pinch": 0.5
+      ]
+      break
+    default: break
+    }
+    return distribution!
   }()
   
   lazy var scoreMultiplier:Double =

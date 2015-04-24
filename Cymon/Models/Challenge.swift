@@ -11,14 +11,27 @@ import Foundation
 // gesture
 
 class Challenge {
-  //  gesture
-  //  multiplier
-  //  challengeImage
-  //  isCompleted
+
   
-//  var isCompleted:Bool = false
+  init(level:Level, type:String)
+  {
+    self.level = level
+    self.gesture = type
+  }
+  
+  let level:Level
   let difficultyMultiplier:Double = 1.0
 //  let challengeImage:String
-  let gesture:String = "tap"
-  let gestureInstruction = "Tap"
+  let gesture:String
+  lazy var gestureInstruction:String = {
+    switch self.gesture {
+      case "tap":
+        return "Tap anywhere"
+      case "pinch":
+        return "Pinch anywhere"
+      default:
+        return ""
+    }
+  }()
+  
 }

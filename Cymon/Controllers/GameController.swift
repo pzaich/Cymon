@@ -31,6 +31,9 @@ class GameController: UIViewController {
   @IBOutlet weak var challengeBoard: UIView!
   
   @IBOutlet weak var challengeLabel: UILabel!
+  @IBOutlet weak var gameheader: UIView!
+  @IBOutlet weak var challengesRemainingLabel: UILabel!
+  
   let game:Game = Game()
   
   @IBAction func cancel()
@@ -54,8 +57,8 @@ class GameController: UIViewController {
   
   func toggleGameElements()
   {
-    gameScore.hidden  = !gameScore.hidden
-    homeButton.hidden = !homeButton.hidden
+    gameheader.hidden = !gameheader.hidden
+    challengeBoard.hidden = !challengeBoard.hidden
     gameTimeRemaining.hidden = !gameTimeRemaining.hidden
   }
   
@@ -64,15 +67,19 @@ class GameController: UIViewController {
     if let nextChallenge = game.nextChallenge() {
       
       challengeLabel.text = nextChallenge.gestureInstruction
-      
+      var gestureRecognizer:UIGestureRecognizer?
       switch nextChallenge.gesture {
       case "tap":
         println("tap")
-        let gestureRecognizer = UITapGestureRecognizer()
-        gestureRecognizer.addTarget(self, action: "onGestureSuccess")
-        challengeBoard.addGestureRecognizer(gestureRecognizer)
+        gestureRecognizer = UITapGestureRecognizer()
+      case "pinch":
+        println("pinch!")
+        gestureRecognizer = UIPinchGestureRecognizer()
       default: break
       }
+      
+      gestureRecognizer!.addTarget(self, action: "onGestureSuccess")
+      challengeBoard.addGestureRecognizer(gestureRecognizer!)
     } else {
       println("should call: level won!")
     }
@@ -97,6 +104,10 @@ class GameController: UIViewController {
   {
     var score:Int = gameScore.text!.toInt()!
     gameScore.text = "\(score + game.currentLevel!.challengeScore)"
+  }
+  
+  func appendChallengesRemainingCount() {
+    challengesRemainingLabel.text = "\(game.currentLevel!.challenges.count) left"
   }
   
   func initializeGame()
