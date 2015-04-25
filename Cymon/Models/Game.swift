@@ -9,9 +9,6 @@
 import Foundation
 
 class Game {
-  init() {
-    
-  }
   
   var nextLevel:Int = 1
   var currentLevel:Level?
@@ -21,7 +18,7 @@ class Game {
   
   func start()
   {
-    self.currentLevel = Level(level: nextLevel)
+    self.currentLevel = Level.createLevel(nextLevel)
   }
   
   func nextChallenge() -> Challenge?

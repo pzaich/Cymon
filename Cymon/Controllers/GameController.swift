@@ -68,7 +68,7 @@ class GameController: UIViewController {
       
       challengeLabel.text = nextChallenge.gestureInstruction
       var gestureRecognizer:UIGestureRecognizer?
-      switch nextChallenge.gesture {
+      switch nextChallenge.gesture! {
       case "tap":
         println("tap")
         gestureRecognizer = UITapGestureRecognizer()

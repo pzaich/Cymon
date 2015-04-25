@@ -8,30 +8,30 @@
 
 import Foundation
 
-// gesture
-
 class Challenge {
-
   
-  init(level:Level, type:String)
+  
+  init(level:Level)
   {
     self.level = level
-    self.gesture = type
   }
   
   let level:Level
   let difficultyMultiplier:Double = 1.0
+  var gesture:String?
+  var gestureInstruction:String?
 //  let challengeImage:String
-  let gesture:String
-  lazy var gestureInstruction:String = {
-    switch self.gesture {
-      case "tap":
-        return "Tap anywhere"
-      case "pinch":
-        return "Pinch anywhere"
-      default:
-        return ""
+  
+  class func createChallenge (level:Level, type:String) -> Challenge {
+    var challengeInstance:Challenge?
+    switch type {
+    case "tap":
+      challengeInstance = TapChallenge(level: level)
+    case "pinch":
+      challengeInstance = PinchChallenge(level: level)
+    default: break
     }
-  }()
+    return challengeInstance!
+  }
   
 }

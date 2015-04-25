@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */; };
+		5E479FB41AE9F2FC00B25DD1 /* PinchChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB31AE9F2FC00B25DD1 /* PinchChallenge.swift */; };
+		5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB51AEAC64C00B25DD1 /* Level1.swift */; };
 		5E8AF61B1AE4B132005313F9 /* swipe-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8AF6191AE4B132005313F9 /* swipe-up.png */; };
 		5E8AF61C1AE4B132005313F9 /* swipe-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8AF61A1AE4B132005313F9 /* swipe-up@2x.png */; };
 		5E8AF6201AE4BFD1005313F9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5E8AF61F1AE4BFD0005313F9 /* Podfile */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		36581186762B0931847C311A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapChallenge.swift; sourceTree = "<group>"; };
+		5E479FB31AE9F2FC00B25DD1 /* PinchChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchChallenge.swift; sourceTree = "<group>"; };
+		5E479FB51AEAC64C00B25DD1 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		5E8AF6191AE4B132005313F9 /* swipe-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe-up.png"; sourceTree = "<group>"; };
 		5E8AF61A1AE4B132005313F9 /* swipe-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe-up@2x.png"; sourceTree = "<group>"; };
 		5E8AF61F1AE4BFD0005313F9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -116,6 +122,23 @@
 				6898E5F50AF4BA25E702ECA0 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E479FAF1AE9F1D900B25DD1 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				5E479FB51AEAC64C00B25DD1 /* Level1.swift */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		5E479FB01AE9F21E00B25DD1 /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */,
+				5E479FB31AE9F2FC00B25DD1 /* PinchChallenge.swift */,
+			);
+			path = Challenges;
 			sourceTree = "<group>";
 		};
 		5E8AF6181AE4B105005313F9 /* Challenges */ = {
@@ -191,6 +214,8 @@
 		5E97D64C1AD78B71004DD3D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E479FB01AE9F21E00B25DD1 /* Challenges */,
+				5E479FAF1AE9F1D900B25DD1 /* Levels */,
 				5EFCE6971ADE22AC00AF501A /* Game.swift */,
 				5EFCE6991ADE23B300AF501A /* Level.swift */,
 				5EFCE69B1AE0B16800AF501A /* Challenge.swift */,
@@ -426,10 +451,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */,
 				5E97D62F1AD78922004DD3D0 /* MenuController.swift in Sources */,
 				5EFCE6921ADCCCA300AF501A /* GameController.swift in Sources */,
 				5E97D62D1AD78922004DD3D0 /* AppDelegate.swift in Sources */,
 				5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */,
+				5E479FB41AE9F2FC00B25DD1 /* PinchChallenge.swift in Sources */,
+				5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */,
 				5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */,
 				5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */,
 			);

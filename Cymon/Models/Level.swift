@@ -10,45 +10,39 @@ import Foundation
 import Dollar
 
 class Level {
-  init(level: Int) {
-    self.level = level
-  }
 
-  var level:Int
   var levelDuration:Int = 60
   let challengeScore:Int = 10
+  var challengeDistribution:[String:Double] = [String:Double]()
   
+  //  batch create according to ratios
+  // http://gamedev.stackexchange.com/questions/81986/how-to-generate-arrays-of-item-types-knowing-just-the-ratio-of-distribution
   lazy var challenges:[Challenge] = {
+    
+    var totalChallenges = 50
     var placeholder:[Challenge] = []
-    for i in 1...50 {
-      if i % 2 == 0 {
-        placeholder.append(Challenge(level: self, type: "tap"))
-      } else {
-        placeholder.append(Challenge(level: self, type: "pinch"))
+    
+    // there is an assumption here that all ratios will round such that 50 objects will be created
+    for (challengetype,ratio) in self.challengeDistribution {
+      var noOfChallengesToCreate = Int(round((Double(totalChallenges) * ratio)))
+      for _ in 1...noOfChallengesToCreate {
+        placeholder.append(Challenge.createChallenge(self, type: challengetype))
       }
     }
-
+    
+    println("\(placeholder.count)")
+  
     return $.shuffle(placeholder)
   }()
   
-  private lazy var challengeDistribution:[String:Double] = {
-    var distribution:[String:Double]?
-    switch self.level {
-    case 1:
-      distribution = [
-        "tap": 0.5,
-        "pinch": 0.5
-      ]
-      break
-    default: break
-    }
-    return distribution!
-  }()
-  
-  lazy var scoreMultiplier:Double =
+  class func createLevel (level:Int)-> Level
   {
-    let multiplier:Double =  1.0 + (Double(self.level) * 0.1)
-    return multiplier
-  }()
-
+    var levelInstance:Level?
+      switch level {
+        case 1:
+          levelInstance = Level1()
+      default: break
+    }
+    return levelInstance!
+  }
 }
