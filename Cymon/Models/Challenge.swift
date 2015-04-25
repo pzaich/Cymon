@@ -20,7 +20,7 @@ class Challenge {
   let difficultyMultiplier:Double = 1.0
   var gesture:String?
   var gestureInstruction:String?
-//  let challengeImage:String
+  var challengeImage:String?
   
   class func createChallenge (level:Level, type:String) -> Challenge {
     var challengeInstance:Challenge?

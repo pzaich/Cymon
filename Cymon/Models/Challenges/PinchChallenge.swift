@@ -15,6 +15,7 @@ class PinchChallenge:Challenge {
     super.init(level: level)
     self.gesture = "pinch"
     self.gestureInstruction = "Pinch screen"
+    self.challengeImage = "pinch-out.png"
   }
   
   

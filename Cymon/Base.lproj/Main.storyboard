@@ -99,13 +99,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPk-yt-9VR">
-                                <rect key="frame" x="93" y="283" width="188" height="161"/>
+                                <rect key="frame" x="93" y="253" width="188" height="161"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="64"/>
                                 <color key="textColor" red="0.97647058823529409" green="0.90980392156862744" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-uz-dGf">
-                                <rect key="frame" x="13" y="231" width="351" height="276"/>
+                                <rect key="frame" x="13" y="226" width="351" height="276"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="230"/>
                                 <color key="textColor" red="0.21176470588235294" green="0.20000000000000001" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,12 +113,15 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbs-WL-WhR">
                                 <rect key="frame" x="13" y="81" width="351" height="566"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPI-Y9-Jka">
-                                        <rect key="frame" x="154" y="393" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPI-Y9-Jka">
+                                        <rect key="frame" x="0.0" y="393" width="351" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.95686274509803926" green="0.8901960784313725" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinch-out.png" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-fn-sY1">
+                                        <rect key="frame" x="95" y="202" width="161" height="161"/>
+                                    </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-FQ-uwI">
@@ -153,6 +156,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="challengeBoard" destination="Fbs-WL-WhR" id="RaC-vH-406"/>
+                        <outlet property="challengeImage" destination="SXD-fn-sY1" id="dZr-cN-g5n"/>
                         <outlet property="challengeLabel" destination="SPI-Y9-Jka" id="b0k-KL-LDU"/>
                         <outlet property="challengesRemainingLabel" destination="Img-FO-o6b" id="OlF-BU-ooz"/>
                         <outlet property="gameScore" destination="Ya8-nx-KbP" id="iWd-E8-bUp"/>
@@ -170,5 +174,6 @@
     <resources>
         <image name="logo-mini.png" width="28" height="29"/>
         <image name="menu-logo.png" width="85" height="87"/>
+        <image name="pinch-out.png" width="162" height="161"/>
     </resources>
 </document>

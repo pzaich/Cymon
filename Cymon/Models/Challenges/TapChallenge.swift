@@ -14,5 +14,6 @@ class TapChallenge:Challenge {
     super.init(level: level)
     self.gesture = "tap"
     self.gestureInstruction = "Tap anywhere"
+    self.challengeImage = "swipe-up.png"
   }
 }

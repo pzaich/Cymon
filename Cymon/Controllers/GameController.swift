@@ -30,6 +30,7 @@ class GameController: UIViewController {
   
   @IBOutlet weak var challengeBoard: UIView!
   
+  @IBOutlet weak var challengeImage: UIImageView!
   @IBOutlet weak var challengeLabel: UILabel!
   @IBOutlet weak var gameheader: UIView!
   @IBOutlet weak var challengesRemainingLabel: UILabel!
@@ -67,6 +68,7 @@ class GameController: UIViewController {
     if let nextChallenge = game.nextChallenge() {
       
       challengeLabel.text = nextChallenge.gestureInstruction
+      challengeImage.image = UIImage(named: nextChallenge.challengeImage!)
       var gestureRecognizer:UIGestureRecognizer?
       switch nextChallenge.gesture! {
       case "tap":
@@ -89,6 +91,7 @@ class GameController: UIViewController {
   {
     println("gesture success")
     appendScore(game.currentChallenge!)
+    appendChallengesRemainingCount()
     removeOldGestures()
     setChallenge()
     println("\(game.currentLevel!.challenges.count)")
@@ -116,6 +119,7 @@ class GameController: UIViewController {
     toggleGameElements()
     gameTimeRemaining.text = "\(game.duration)"
     gameTimeRemainingCountDown()
+    appendChallengesRemainingCount()
     setChallenge()
   }
   
