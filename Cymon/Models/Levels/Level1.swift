@@ -13,8 +13,8 @@ class Level1:Level {
   override init() {
     super.init()
     self.challengeDistribution = [
-      "tap": 0.5,
-      "pinch": 0.5
+      "tap": 1.0,
+//      "pinch": 0.5
     ]
   }
 }

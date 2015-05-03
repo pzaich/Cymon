@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Paul Zaich. All rights reserved.
 //
 
-import Foundation
-
 class PinchChallenge:Challenge {
   
   override init(level: Level)

@@ -52,10 +52,6 @@ class GameController: UIViewController {
     presentViewController(refreshAlert, animated: true, completion: nil)
   }
   
-  @IBAction func didChallenge(sender: UIButton) {
-    println("did challenge")
-  }
-  
   func toggleGameElements()
   {
     gameheader.hidden = !gameheader.hidden
@@ -69,22 +65,46 @@ class GameController: UIViewController {
       
       challengeLabel.text = nextChallenge.gestureInstruction
       challengeImage.image = UIImage(named: nextChallenge.challengeImage!)
-      var gestureRecognizer:UIGestureRecognizer?
-      switch nextChallenge.gesture! {
-      case "tap":
-        println("tap")
-        gestureRecognizer = UITapGestureRecognizer()
-      case "pinch":
-        println("pinch!")
-        gestureRecognizer = UIPinchGestureRecognizer()
-      default: break
-      }
-      
-      gestureRecognizer!.addTarget(self, action: "onGestureSuccess")
+
+      let gestureRecognizer:UIGestureRecognizer? = {
+        switch nextChallenge.gesture! {
+        case "tap":
+          println("tap")
+          let gesture = UILongPressGestureRecognizer()
+          gesture.minimumPressDuration = 0.01
+          gesture.addTarget(self, action: "handleTapChallenge:")
+          return gesture
+        case "pinch":
+          println("pinch!")
+          return UIPinchGestureRecognizer()
+        case "swipeUp":
+          var gestureRecognizer = UISwipeGestureRecognizer()
+          gestureRecognizer.direction = UISwipeGestureRecognizerDirection.Down
+          return gestureRecognizer
+        default:
+          return nil
+        }
+      }()
+    
       challengeBoard.addGestureRecognizer(gestureRecognizer!)
     } else {
       println("should call: level won!")
     }
+  }
+  
+  func handleTapChallenge(sender: UILongPressGestureRecognizer) {
+    let challenge = game.currentChallenge as! TapChallenge
+
+    if sender.state == .Ended {
+      challengeImage.image = UIImage(named: challenge.challengeImage!)
+      onGestureSuccess()
+    }
+    
+    if (sender.state == .Began) {
+      println("lxxxxll")
+      challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
+    }
+    
   }
   
   func onGestureSuccess()
@@ -93,8 +113,9 @@ class GameController: UIViewController {
     appendScore(game.currentChallenge!)
     appendChallengesRemainingCount()
     removeOldGestures()
+    
+    // proceed to next challenge
     setChallenge()
-    println("\(game.currentLevel!.challenges.count)")
   }
   
   func removeOldGestures() {
@@ -146,7 +167,7 @@ class GameController: UIViewController {
     })
   }
   
-  private func countDown(label:UILabel, timer:() -> Void, callback:() -> Void)
+  func countDown(label:UILabel, timer:() -> Void, callback:() -> Void)
   {
     let count = label.text!
     var newCount = count.toInt()! - 1

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//convert to protocol
 class Challenge {
   
   
