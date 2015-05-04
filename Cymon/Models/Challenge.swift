@@ -28,8 +28,8 @@ class Challenge {
     switch type {
     case "tap":
       challengeInstance = TapChallenge(level: level)
-    case "pinch":
-      challengeInstance = PinchChallenge(level: level)
+    case "pinchOut":
+      challengeInstance = PinchOutChallenge(level: level)
     default: break
     }
     return challengeInstance!

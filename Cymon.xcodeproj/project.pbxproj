@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */; };
-		5E479FB41AE9F2FC00B25DD1 /* PinchChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB31AE9F2FC00B25DD1 /* PinchChallenge.swift */; };
+		5E479FB41AE9F2FC00B25DD1 /* PinchOutChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */; };
 		5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB51AEAC64C00B25DD1 /* Level1.swift */; };
 		5E479FB91AEC080900B25DD1 /* pinch-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E479FB71AEC080900B25DD1 /* pinch-out.png */; };
 		5E479FBA1AEC080900B25DD1 /* pinch-out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E479FB81AEC080900B25DD1 /* pinch-out@2x.png */; };
@@ -37,6 +37,7 @@
 		5EADC48E1AF52FC9006F458C /* tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADC48C1AF52FC9006F458C /* tap@2x.png */; };
 		5EADC4911AF53937006F458C /* tap-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADC48F1AF53937006F458C /* tap-active.png */; };
 		5EADC4921AF53937006F458C /* tap-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADC4901AF53937006F458C /* tap-active@2x.png */; };
+		5EADC4941AF6E5D7006F458C /* PinchInChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EADC4931AF6E5D7006F458C /* PinchInChallenge.swift */; };
 		5EEE9F901ADB0B4600A4DA94 /* logo-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE9F8E1ADB0B4600A4DA94 /* logo-large.png */; };
 		5EEE9F931ADB0B7B00A4DA94 /* logo-large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE9F921ADB0B7B00A4DA94 /* logo-large@2x.png */; };
 		5EFCE68C1ADB5F1D00AF501A /* logo-large@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCE68B1ADB5F1D00AF501A /* logo-large@3x.png */; };
@@ -64,7 +65,7 @@
 /* Begin PBXFileReference section */
 		36581186762B0931847C311A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapChallenge.swift; sourceTree = "<group>"; };
-		5E479FB31AE9F2FC00B25DD1 /* PinchChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchChallenge.swift; sourceTree = "<group>"; };
+		5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchOutChallenge.swift; sourceTree = "<group>"; };
 		5E479FB51AEAC64C00B25DD1 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		5E479FB71AEC080900B25DD1 /* pinch-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-out.png"; sourceTree = "<group>"; };
 		5E479FB81AEC080900B25DD1 /* pinch-out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-out@2x.png"; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		5EADC48C1AF52FC9006F458C /* tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap@2x.png"; sourceTree = "<group>"; };
 		5EADC48F1AF53937006F458C /* tap-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-active.png"; sourceTree = "<group>"; };
 		5EADC4901AF53937006F458C /* tap-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-active@2x.png"; sourceTree = "<group>"; };
+		5EADC4931AF6E5D7006F458C /* PinchInChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchInChallenge.swift; sourceTree = "<group>"; };
 		5EEE9F8E1ADB0B4600A4DA94 /* logo-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-large.png"; sourceTree = "<group>"; };
 		5EEE9F921ADB0B7B00A4DA94 /* logo-large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-large@2x.png"; sourceTree = "<group>"; };
 		5EFCE68B1ADB5F1D00AF501A /* logo-large@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-large@3x.png"; sourceTree = "<group>"; };
@@ -153,8 +155,9 @@
 			children = (
 				5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */,
 				5EADC4871AF44B8B006F458C /* SwipeRightChallenge.swift */,
-				5E479FB31AE9F2FC00B25DD1 /* PinchChallenge.swift */,
+				5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */,
 				5EADC4891AF44CD3006F458C /* SwipeUpChallenge.swift */,
+				5EADC4931AF6E5D7006F458C /* PinchInChallenge.swift */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -487,9 +490,10 @@
 				5EFCE6921ADCCCA300AF501A /* GameController.swift in Sources */,
 				5E97D62D1AD78922004DD3D0 /* AppDelegate.swift in Sources */,
 				5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */,
-				5E479FB41AE9F2FC00B25DD1 /* PinchChallenge.swift in Sources */,
+				5E479FB41AE9F2FC00B25DD1 /* PinchOutChallenge.swift in Sources */,
 				5EADC48A1AF44CD3006F458C /* SwipeUpChallenge.swift in Sources */,
 				5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */,
+				5EADC4941AF6E5D7006F458C /* PinchInChallenge.swift in Sources */,
 				5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */,
 				5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */,
 			);

@@ -69,14 +69,15 @@ class GameController: UIViewController {
       let gestureRecognizer:UIGestureRecognizer? = {
         switch nextChallenge.gesture! {
         case "tap":
-          println("tap")
           let gesture = UILongPressGestureRecognizer()
           gesture.minimumPressDuration = 0.01
           gesture.addTarget(self, action: "handleTapChallenge:")
           return gesture
-        case "pinch":
-          println("pinch!")
-          return UIPinchGestureRecognizer()
+        case "pinchOut":
+          println("pinch out!")
+          let gesture = UIPinchGestureRecognizer()
+          gesture.addTarget(self, action: "handlePinchOutChallenge:")
+          return gesture
         case "swipeUp":
           var gestureRecognizer = UISwipeGestureRecognizer()
           gestureRecognizer.direction = UISwipeGestureRecognizerDirection.Down
@@ -85,10 +86,31 @@ class GameController: UIViewController {
           return nil
         }
       }()
-    
-      challengeBoard.addGestureRecognizer(gestureRecognizer!)
+      
+      if let gesture = gestureRecognizer {
+        challengeBoard.addGestureRecognizer(gesture)
+      }
     } else {
       println("should call: level won!")
+    }
+  }
+  
+  func handlePinchOutChallenge(sender: UIPinchGestureRecognizer) {
+    if sender.state == .Began && Float(sender.scale) > 1.0 {
+      let multiplier:Float = 1.5
+      let transformScale = Float(multiplier) * Float(sender.scale)
+      challengeImage.transform = CGAffineTransformScale(challengeImage.transform, CGFloat(transformScale), CGFloat(transformScale))
+      sender.scale = 1
+    }
+    
+    //reset initial scaling
+    if sender.state == .Cancelled || sender.state == .Ended {
+      challengeImage.transform = CGAffineTransformMakeScale(CGFloat(1.0), CGFloat(1.0))
+      println("reset scaling")
+    }
+    
+    if sender.state == .Ended && Float(sender.scale) > 2.0  {
+      onGestureSuccess()
     }
   }
   
@@ -100,7 +122,7 @@ class GameController: UIViewController {
       onGestureSuccess()
     }
     
-    if (sender.state == .Began) {
+    if sender.state == .Began {
       println("lxxxxll")
       challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
     }
