@@ -14,7 +14,8 @@ class Level1:Level {
     super.init()
     self.challengeDistribution = [
       "tap": 0.5,
-      "pinchOut": 0.5
+      "pinchOut": 0.25,
+      "pinchIn": 0.25
     ]
   }
 }

@@ -64,6 +64,7 @@ class GameController: UIViewController {
     if let nextChallenge = game.nextChallenge() {
       
       challengeLabel.text = nextChallenge.gestureInstruction
+      println(nextChallenge.challengeImage!)
       challengeImage.image = UIImage(named: nextChallenge.challengeImage!)
 
       let gestureRecognizer:UIGestureRecognizer? = {
@@ -77,6 +78,11 @@ class GameController: UIViewController {
           println("pinch out!")
           let gesture = UIPinchGestureRecognizer()
           gesture.addTarget(self, action: "handlePinchOutChallenge:")
+          return gesture
+        case "pinchIn":
+          println("pinch in!")
+          let gesture = UIPinchGestureRecognizer()
+          gesture.addTarget(self, action: "handlePinchInChallenge:")
           return gesture
         case "swipeUp":
           var gestureRecognizer = UISwipeGestureRecognizer()
@@ -114,6 +120,25 @@ class GameController: UIViewController {
     }
   }
   
+  func handlePinchInChallenge(sender: UIPinchGestureRecognizer) {
+    if (sender.state == .Began) && (Float(sender.scale) < 1.0)  {
+      let multiplier:Float = 1.5
+      let transformScale = Float(multiplier) / Float(sender.scale)
+      challengeImage.transform = CGAffineTransformScale(challengeImage.transform, CGFloat(transformScale), CGFloat(transformScale))
+      sender.scale = 1
+    }
+    
+    //reset initial scaling
+    if sender.state == .Cancelled || sender.state == .Ended {
+      challengeImage.transform = CGAffineTransformMakeScale(CGFloat(1.0), CGFloat(1.0))
+      println("reset scaling")
+    }
+    
+    if sender.state == .Ended && Float(sender.scale) < 0.5  {
+      onGestureSuccess()
+    }
+  }
+  
   func handleTapChallenge(sender: UILongPressGestureRecognizer) {
     let challenge = game.currentChallenge as! TapChallenge
 
@@ -132,12 +157,7 @@ class GameController: UIViewController {
   func onGestureSuccess()
   {
     println("gesture success")
-    appendScore(game.currentChallenge!)
-    appendChallengesRemainingCount()
-    removeOldGestures()
-    
-    // proceed to next challenge
-    setChallenge()
+    handleSuccess()
   }
   
   func removeOldGestures() {
@@ -154,6 +174,27 @@ class GameController: UIViewController {
   
   func appendChallengesRemainingCount() {
     challengesRemainingLabel.text = "\(game.currentLevel!.challenges.count) left"
+  }
+  
+  func handleSuccess() {
+    appendScore(game.currentChallenge!)
+    appendChallengesRemainingCount()
+    removeOldGestures()
+    setChallenge()
+    
+//    [UIView animateWithDuration:1.0 animations:^{
+//      view.backgroundColor = [UIColor redColor];
+//      }];
+//    toggleGameElements()
+//    let originalColor = view.backgroundColor
+    
+//    UIView.animateWithDuration(2.0, delay: 0, options: .CurveEaseInOut, animations: {
+////      self.view.backgroundColor = UIColor(red: CGFloat(0.976), green: CGFloat(0.91), blue: CGFloat(0.337), alpha: CGFloat(0.5))
+//    }, completion: { finished in
+//      // proceed to next challenge
+//      self.setChallenge()
+////      self.view.backgroundColor = originalColor
+//    })
   }
   
   func initializeGame()

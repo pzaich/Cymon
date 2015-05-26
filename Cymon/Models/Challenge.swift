@@ -30,6 +30,8 @@ class Challenge {
       challengeInstance = TapChallenge(level: level)
     case "pinchOut":
       challengeInstance = PinchOutChallenge(level: level)
+    case "pinchIn":
+      challengeInstance = PinchInChallenge(level: level)
     default: break
     }
     return challengeInstance!

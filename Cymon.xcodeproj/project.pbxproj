@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E36A3DE1B14A9200041CA5A /* pinch-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E36A3DC1B14A9200041CA5A /* pinch-in.png */; };
+		5E36A3DF1B14A9200041CA5A /* pinch-in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */; };
 		5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */; };
 		5E479FB41AE9F2FC00B25DD1 /* PinchOutChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */; };
 		5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB51AEAC64C00B25DD1 /* Level1.swift */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		36581186762B0931847C311A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5E36A3DC1B14A9200041CA5A /* pinch-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in.png"; sourceTree = "<group>"; };
+		5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in@2x.png"; sourceTree = "<group>"; };
 		5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapChallenge.swift; sourceTree = "<group>"; };
 		5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchOutChallenge.swift; sourceTree = "<group>"; };
 		5E479FB51AEAC64C00B25DD1 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 		5E8AF6181AE4B105005313F9 /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
+				5E36A3DC1B14A9200041CA5A /* pinch-in.png */,
+				5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */,
 				5EADC48F1AF53937006F458C /* tap-active.png */,
 				5EADC4901AF53937006F458C /* tap-active@2x.png */,
 				5EADC48B1AF52FC9006F458C /* tap.png */,
@@ -397,6 +403,7 @@
 				5E8AF6201AE4BFD1005313F9 /* Podfile in Resources */,
 				5EEE9F901ADB0B4600A4DA94 /* logo-large.png in Resources */,
 				5E97D6321AD78922004DD3D0 /* Main.storyboard in Resources */,
+				5E36A3DF1B14A9200041CA5A /* pinch-in@2x.png in Resources */,
 				5E8AF61B1AE4B132005313F9 /* swipe-up.png in Resources */,
 				5E479FB91AEC080900B25DD1 /* pinch-out.png in Resources */,
 				5E97D65C1AD9EF5A004DD3D0 /* Lato-BolIta.ttf in Resources */,
@@ -419,6 +426,7 @@
 				5E97D65D1AD9EF5A004DD3D0 /* Lato-Hai.ttf in Resources */,
 				5E97D65F1AD9EF5A004DD3D0 /* Lato-Lig.ttf in Resources */,
 				5E97D6611AD9EF5A004DD3D0 /* Lato-Reg.ttf in Resources */,
+				5E36A3DE1B14A9200041CA5A /* pinch-in.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
