@@ -51,7 +51,7 @@
 		5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6971ADE22AC00AF501A /* Game.swift */; };
 		5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6991ADE23B300AF501A /* Level.swift */; };
 		5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE69B1AE0B16800AF501A /* Challenge.swift */; };
-		D67C73D241AA35F782D993B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67299ACAF645A02F3D7D9B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D67C73D241AA35F782D993B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67299ACAF645A02F3D7D9B7C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -359,7 +359,8 @@
 		5E97D61F1AD78922004DD3D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Paul Zaich";
 				TargetAttributes = {
 					5E97D6261AD78922004DD3D0 = {
@@ -566,6 +567,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -636,6 +638,7 @@
 				INFOPLIST_FILE = Cymon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -651,6 +654,7 @@
 				INFOPLIST_FILE = Cymon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -670,6 +674,7 @@
 				);
 				INFOPLIST_FILE = CymonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cymon.app/Cymon";
 			};
@@ -685,6 +690,7 @@
 				);
 				INFOPLIST_FILE = CymonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cymon.app/Cymon";
 			};

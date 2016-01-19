@@ -11,7 +11,7 @@ import Dollar
 
 class Level {
 
-  var levelDuration:Int = 60
+  var levelDuration:Int = 10
   let challengeScore:Int = 10
   var challengeDistribution:[String:Double] = [String:Double]()
   
@@ -19,7 +19,7 @@ class Level {
   // http://gamedev.stackexchange.com/questions/81986/how-to-generate-arrays-of-item-types-knowing-just-the-ratio-of-distribution
   lazy var challenges:[Challenge] = {
     
-    var totalChallenges = 50
+    var totalChallenges = 12
     var placeholder:[Challenge] = []
     
     // there is an assumption here that all ratios will round such that 50 objects will be created
@@ -30,7 +30,7 @@ class Level {
       }
     }
     
-    println("\(placeholder.count)")
+    print("\(placeholder.count)")
   
     return $.shuffle(placeholder)
   }()

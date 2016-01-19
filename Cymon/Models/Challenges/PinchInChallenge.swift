@@ -12,8 +12,8 @@ class PinchInChallenge:Challenge {
   {
     super.init(level: level)
     self.gesture = "pinchIn"
-    self.gestureInstruction = "Pinch to zoom out"
-    self.challengeImage = "pinch-in.png"
+    self.gestureInstruction = "Pinch to zoom in"
+    self.challengeImage = "pinch-out.png"
   }
   
 }

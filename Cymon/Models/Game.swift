@@ -14,7 +14,7 @@ class Game {
   var currentLevel:Level?
   var currentChallenge:Challenge?
 
-  let duration:Int = 60
+  let duration:Int = 10
   
   func start()
   {

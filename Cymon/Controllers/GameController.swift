@@ -39,14 +39,14 @@ class GameController: UIViewController {
   
   @IBAction func cancel()
   {
-    var refreshAlert = UIAlertController(title: "Quit game", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
+    let refreshAlert = UIAlertController(title: "Quit game", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
     
     refreshAlert.addAction(UIAlertAction(title: "Leave", style: .Default, handler: { (action: UIAlertAction!) in
         self.dismissViewControllerAnimated(true, completion: nil)
     }))
     
     refreshAlert.addAction(UIAlertAction(title: "Stay", style: .Default, handler: { (action: UIAlertAction!) in
-        println("Handle Cancel Logic here")
+        print("Handle Cancel Logic here")
     }))
     
     presentViewController(refreshAlert, animated: true, completion: nil)
@@ -64,7 +64,7 @@ class GameController: UIViewController {
     if let nextChallenge = game.nextChallenge() {
       
       challengeLabel.text = nextChallenge.gestureInstruction
-      println(nextChallenge.challengeImage!)
+      print(nextChallenge.challengeImage!)
       challengeImage.image = UIImage(named: nextChallenge.challengeImage!)
 
       let gestureRecognizer:UIGestureRecognizer? = {
@@ -75,17 +75,17 @@ class GameController: UIViewController {
           gesture.addTarget(self, action: "handleTapChallenge:")
           return gesture
         case "pinchOut":
-          println("pinch out!")
-          let gesture = UIPinchGestureRecognizer()
-          gesture.addTarget(self, action: "handlePinchOutChallenge:")
-          return gesture
-        case "pinchIn":
-          println("pinch in!")
+          print("pinch out!")
           let gesture = UIPinchGestureRecognizer()
           gesture.addTarget(self, action: "handlePinchInChallenge:")
           return gesture
+        case "pinchIn":
+          print("pinch in!")
+          let gesture = UIPinchGestureRecognizer()
+          gesture.addTarget(self, action: "handlePinchOutChallenge:")
+          return gesture
         case "swipeUp":
-          var gestureRecognizer = UISwipeGestureRecognizer()
+          let gestureRecognizer = UISwipeGestureRecognizer()
           gestureRecognizer.direction = UISwipeGestureRecognizerDirection.Down
           return gestureRecognizer
         default:
@@ -97,14 +97,14 @@ class GameController: UIViewController {
         challengeBoard.addGestureRecognizer(gesture)
       }
     } else {
-      println("should call: level won!")
+      print("should call: level won!")
     }
   }
   
   func handlePinchOutChallenge(sender: UIPinchGestureRecognizer) {
     if sender.state == .Began && Float(sender.scale) > 1.0 {
       let multiplier:Float = 1.5
-      let transformScale = Float(multiplier) * Float(sender.scale)
+      let transformScale = multiplier * Float(sender.scale)
       challengeImage.transform = CGAffineTransformScale(challengeImage.transform, CGFloat(transformScale), CGFloat(transformScale))
       sender.scale = 1
     }
@@ -112,18 +112,19 @@ class GameController: UIViewController {
     //reset initial scaling
     if sender.state == .Cancelled || sender.state == .Ended {
       challengeImage.transform = CGAffineTransformMakeScale(CGFloat(1.0), CGFloat(1.0))
-      println("reset scaling")
     }
     
     if sender.state == .Ended && Float(sender.scale) > 2.0  {
       onGestureSuccess()
+    } else {
+      wiggle(challengeImage)
     }
   }
   
   func handlePinchInChallenge(sender: UIPinchGestureRecognizer) {
     if (sender.state == .Began) && (Float(sender.scale) < 1.0)  {
-      let multiplier:Float = 1.5
-      let transformScale = Float(multiplier) / Float(sender.scale)
+      let multiplier:Float = 5.0
+      let transformScale = Float(sender.scale) / multiplier
       challengeImage.transform = CGAffineTransformScale(challengeImage.transform, CGFloat(transformScale), CGFloat(transformScale))
       sender.scale = 1
     }
@@ -131,11 +132,12 @@ class GameController: UIViewController {
     //reset initial scaling
     if sender.state == .Cancelled || sender.state == .Ended {
       challengeImage.transform = CGAffineTransformMakeScale(CGFloat(1.0), CGFloat(1.0))
-      println("reset scaling")
     }
     
-    if sender.state == .Ended && Float(sender.scale) < 0.5  {
+    if sender.state == .Ended && Float(sender.scale) < 0.8  {
       onGestureSuccess()
+    } else {
+      wiggle(challengeImage)
     }
   }
   
@@ -145,10 +147,11 @@ class GameController: UIViewController {
     if sender.state == .Ended {
       challengeImage.image = UIImage(named: challenge.challengeImage!)
       onGestureSuccess()
+    } else {
+      wiggle(challengeImage)
     }
     
     if sender.state == .Began {
-      println("lxxxxll")
       challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
     }
     
@@ -156,24 +159,34 @@ class GameController: UIViewController {
   
   func onGestureSuccess()
   {
-    println("gesture success")
+    print("gesture success")
     handleSuccess()
   }
   
   func removeOldGestures() {
     for recognizer in challengeBoard.gestureRecognizers! {
-      challengeBoard.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+      challengeBoard.removeGestureRecognizer(recognizer)
     }
   }
   
   func appendScore(challenge: Challenge)
   {
-    var score:Int = gameScore.text!.toInt()!
+    let score:Int = Int(gameScore.text!)!
     gameScore.text = "\(score + game.currentLevel!.challengeScore)"
   }
   
   func appendChallengesRemainingCount() {
     challengesRemainingLabel.text = "\(game.currentLevel!.challenges.count) left"
+  }
+  
+  func wiggle( challengeImage: UIImageView ) {
+    let animation = CABasicAnimation(keyPath: "position")
+    animation.duration = 0.07
+    animation.repeatCount = 2
+    animation.autoreverses = true
+    animation.fromValue = NSValue(CGPoint: CGPointMake(challengeImage.center.x - 5, challengeImage.center.y))
+    animation.toValue = NSValue(CGPoint: CGPointMake(challengeImage.center.x + 5, challengeImage.center.y))
+    challengeImage.layer.addAnimation(animation, forKey: "position")
   }
   
   func handleSuccess() {
@@ -214,7 +227,7 @@ class GameController: UIViewController {
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameTimeRemainingCountDown", userInfo: nil, repeats: false)
       },
       callback: { () in
-        println("game Over")
+        print("game Over")
     })
   }
   
@@ -233,7 +246,7 @@ class GameController: UIViewController {
   func countDown(label:UILabel, timer:() -> Void, callback:() -> Void)
   {
     let count = label.text!
-    var newCount = count.toInt()! - 1
+    let newCount = Int(count)! - 1
     
     if (newCount > 0 ) {
       label.text = "\(newCount)"
