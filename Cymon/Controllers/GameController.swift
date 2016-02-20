@@ -116,7 +116,7 @@ class GameController: UIViewController {
     
     if sender.state == .Ended && Float(sender.scale) > 2.0  {
       onGestureSuccess()
-    } else {
+    } else if sender.state == .Ended {
       wiggle(challengeImage)
     }
   }
@@ -136,7 +136,7 @@ class GameController: UIViewController {
     
     if sender.state == .Ended && Float(sender.scale) < 0.8  {
       onGestureSuccess()
-    } else {
+    } else if sender.state == .Ended {
       wiggle(challengeImage)
     }
   }
@@ -147,10 +147,8 @@ class GameController: UIViewController {
     if sender.state == .Ended {
       challengeImage.image = UIImage(named: challenge.challengeImage!)
       onGestureSuccess()
-    } else {
-      wiggle(challengeImage)
     }
-    
+
     if sender.state == .Began {
       challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
     }
