@@ -1,5 +1,5 @@
 //
-//  Level1.swift
+//  Level2.swift
 //  Cymon
 //
 //  Created by Paul Zaich on 4/24/15.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-class Level1:Level {
+class Level2:Level {
   
   override init() {
     super.init()
     self.duration = 10
-    self.challengeScore = 10
-    self.totalChallenges = 12
+    self.challengeScore = 11
+    self.totalChallenges = 15
     self.challengeDistribution = [
       "tap": 0.5,
       "pinchOut": 0.25,

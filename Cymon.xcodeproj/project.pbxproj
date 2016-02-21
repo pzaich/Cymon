@@ -14,6 +14,7 @@
 		5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB51AEAC64C00B25DD1 /* Level1.swift */; };
 		5E479FB91AEC080900B25DD1 /* pinch-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E479FB71AEC080900B25DD1 /* pinch-out.png */; };
 		5E479FBA1AEC080900B25DD1 /* pinch-out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E479FB81AEC080900B25DD1 /* pinch-out@2x.png */; };
+		5E5CB5B81C7A65090057712E /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CB5B71C7A65090057712E /* Level2.swift */; };
 		5E8AF61B1AE4B132005313F9 /* swipe-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8AF6191AE4B132005313F9 /* swipe-up.png */; };
 		5E8AF61C1AE4B132005313F9 /* swipe-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8AF61A1AE4B132005313F9 /* swipe-up@2x.png */; };
 		5E8AF6201AE4BFD1005313F9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5E8AF61F1AE4BFD0005313F9 /* Podfile */; };
@@ -73,6 +74,7 @@
 		5E479FB51AEAC64C00B25DD1 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		5E479FB71AEC080900B25DD1 /* pinch-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-out.png"; sourceTree = "<group>"; };
 		5E479FB81AEC080900B25DD1 /* pinch-out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-out@2x.png"; sourceTree = "<group>"; };
+		5E5CB5B71C7A65090057712E /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		5E8AF6191AE4B132005313F9 /* swipe-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe-up.png"; sourceTree = "<group>"; };
 		5E8AF61A1AE4B132005313F9 /* swipe-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe-up@2x.png"; sourceTree = "<group>"; };
 		5E8AF61F1AE4BFD0005313F9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5E479FB51AEAC64C00B25DD1 /* Level1.swift */,
+				5E5CB5B71C7A65090057712E /* Level2.swift */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				5EADC4881AF44B8B006F458C /* SwipeRightChallenge.swift in Sources */,
 				5E97D62F1AD78922004DD3D0 /* MenuController.swift in Sources */,
 				5EFCE6921ADCCCA300AF501A /* GameController.swift in Sources */,
+				5E5CB5B81C7A65090057712E /* Level2.swift in Sources */,
 				5E97D62D1AD78922004DD3D0 /* AppDelegate.swift in Sources */,
 				5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */,
 				5E479FB41AE9F2FC00B25DD1 /* PinchOutChallenge.swift in Sources */,

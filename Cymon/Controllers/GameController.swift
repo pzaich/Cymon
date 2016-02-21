@@ -212,7 +212,7 @@ class GameController: UIViewController {
   {
     game.start()
     toggleGameElements()
-    gameTimeRemaining.text = "\(game.duration)"
+    gameTimeRemaining.text = "\(game.currentLevel!.duration)"
     gameTimeRemainingCountDown()
     appendChallengesRemainingCount()
     setChallenge()

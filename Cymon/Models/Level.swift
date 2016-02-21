@@ -11,20 +11,20 @@ import Dollar
 
 class Level {
 
-  var levelDuration:Int = 10
-  let challengeScore:Int = 10
+  var duration:Int = 10
+  var challengeScore:Int = 0
   var challengeDistribution:[String:Double] = [String:Double]()
+  var totalChallenges:Int = 0
   
   //  batch create according to ratios
   // http://gamedev.stackexchange.com/questions/81986/how-to-generate-arrays-of-item-types-knowing-just-the-ratio-of-distribution
   lazy var challenges:[Challenge] = {
     
-    var totalChallenges = 12
     var placeholder:[Challenge] = []
     
     // there is an assumption here that all ratios will round such that 50 objects will be created
     for (challengetype,ratio) in self.challengeDistribution {
-      var noOfChallengesToCreate = Int(round((Double(totalChallenges) * ratio)))
+      var noOfChallengesToCreate = Int(round((Double(self.totalChallenges) * ratio)))
       for _ in 1...noOfChallengesToCreate {
         placeholder.append(Challenge.createChallenge(self, type: challengetype))
       }
