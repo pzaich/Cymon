@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5E36A3DE1B14A9200041CA5A /* pinch-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E36A3DC1B14A9200041CA5A /* pinch-in.png */; };
 		5E36A3DF1B14A9200041CA5A /* pinch-in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */; };
+		5E40253B1C791905007482C9 /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40253A1C791905007482C9 /* Level2.swift */; };
+		5E40253D1C791A0E007482C9 /* Levelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40253C1C791A0E007482C9 /* Levelable.swift */; };
+		5E4025431C798196007482C9 /* LevelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4025421C798196007482C9 /* LevelBase.swift */; };
 		5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */; };
 		5E479FB41AE9F2FC00B25DD1 /* PinchOutChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */; };
 		5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB51AEAC64C00B25DD1 /* Level1.swift */; };
@@ -49,7 +52,7 @@
 		5EFCE6951ADE1E6D00AF501A /* logo-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCE6931ADE1E6D00AF501A /* logo-mini.png */; };
 		5EFCE6961ADE1E6D00AF501A /* logo-mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCE6941ADE1E6D00AF501A /* logo-mini@2x.png */; };
 		5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6971ADE22AC00AF501A /* Game.swift */; };
-		5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6991ADE23B300AF501A /* Level.swift */; };
+		5EFCE69A1ADE23B300AF501A /* LevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6991ADE23B300AF501A /* LevelFactory.swift */; };
 		5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE69B1AE0B16800AF501A /* Challenge.swift */; };
 		D67C73D241AA35F782D993B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67299ACAF645A02F3D7D9B7C /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +71,9 @@
 		36581186762B0931847C311A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5E36A3DC1B14A9200041CA5A /* pinch-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in.png"; sourceTree = "<group>"; };
 		5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in@2x.png"; sourceTree = "<group>"; };
+		5E40253A1C791905007482C9 /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
+		5E40253C1C791A0E007482C9 /* Levelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Levelable.swift; sourceTree = "<group>"; };
+		5E4025421C798196007482C9 /* LevelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelBase.swift; sourceTree = "<group>"; };
 		5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapChallenge.swift; sourceTree = "<group>"; };
 		5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchOutChallenge.swift; sourceTree = "<group>"; };
 		5E479FB51AEAC64C00B25DD1 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
@@ -112,7 +118,7 @@
 		5EFCE6931ADE1E6D00AF501A /* logo-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-mini.png"; sourceTree = "<group>"; };
 		5EFCE6941ADE1E6D00AF501A /* logo-mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-mini@2x.png"; sourceTree = "<group>"; };
 		5EFCE6971ADE22AC00AF501A /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		5EFCE6991ADE23B300AF501A /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		5EFCE6991ADE23B300AF501A /* LevelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelFactory.swift; sourceTree = "<group>"; };
 		5EFCE69B1AE0B16800AF501A /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		67299ACAF645A02F3D7D9B7C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6898E5F50AF4BA25E702ECA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				5E479FB51AEAC64C00B25DD1 /* Level1.swift */,
+				5E40253A1C791905007482C9 /* Level2.swift */,
+				5E40253C1C791A0E007482C9 /* Levelable.swift */,
+				5E4025421C798196007482C9 /* LevelBase.swift */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -250,7 +259,7 @@
 				5E479FB01AE9F21E00B25DD1 /* Challenges */,
 				5E479FAF1AE9F1D900B25DD1 /* Levels */,
 				5EFCE6971ADE22AC00AF501A /* Game.swift */,
-				5EFCE6991ADE23B300AF501A /* Level.swift */,
+				5EFCE6991ADE23B300AF501A /* LevelFactory.swift */,
 				5EFCE69B1AE0B16800AF501A /* Challenge.swift */,
 			);
 			indentWidth = 2;
@@ -495,14 +504,17 @@
 			files = (
 				5E479FB61AEAC64C00B25DD1 /* Level1.swift in Sources */,
 				5EADC4881AF44B8B006F458C /* SwipeRightChallenge.swift in Sources */,
+				5E40253D1C791A0E007482C9 /* Levelable.swift in Sources */,
 				5E97D62F1AD78922004DD3D0 /* MenuController.swift in Sources */,
 				5EFCE6921ADCCCA300AF501A /* GameController.swift in Sources */,
+				5E40253B1C791905007482C9 /* Level2.swift in Sources */,
 				5E97D62D1AD78922004DD3D0 /* AppDelegate.swift in Sources */,
-				5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */,
+				5EFCE69A1ADE23B300AF501A /* LevelFactory.swift in Sources */,
 				5E479FB41AE9F2FC00B25DD1 /* PinchOutChallenge.swift in Sources */,
 				5EADC48A1AF44CD3006F458C /* SwipeUpChallenge.swift in Sources */,
 				5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */,
 				5EADC4941AF6E5D7006F458C /* PinchInChallenge.swift in Sources */,
+				5E4025431C798196007482C9 /* LevelBase.swift in Sources */,
 				5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */,
 				5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */,
 			);

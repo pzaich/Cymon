@@ -12,18 +12,18 @@ import Foundation
 class Challenge {
   
   
-  init(level:Level)
+  init(level:LevelBase)
   {
     self.level = level
   }
   
-  let level:Level
+  let level:LevelBase
   let difficultyMultiplier:Double = 1.0
   var gesture:String?
   var gestureInstruction:String?
   var challengeImage:String?
   
-  class func createChallenge (level:Level, type:String) -> Challenge {
+  class func createChallenge (level:LevelBase, type:String) -> Challenge {
     var challengeInstance:Challenge?
     switch type {
     case "tap":

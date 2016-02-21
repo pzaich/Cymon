@@ -11,14 +11,17 @@ import Foundation
 class Game {
   
   var nextLevel:Int = 1
-  var currentLevel:Level?
+  var currentLevel:LevelBase?
   var currentChallenge:Challenge?
 
   let duration:Int = 10
   
   func start()
   {
-    self.currentLevel = Level.createLevel(nextLevel)
+    self.currentLevel = LevelFactory.createLevel(nextLevel)
+    self.nextLevel += 1
+    
+    print(nextLevel)
   }
   
   func nextChallenge() -> Challenge?

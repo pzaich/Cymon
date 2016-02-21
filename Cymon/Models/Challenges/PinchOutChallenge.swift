@@ -10,7 +10,7 @@
 
 class PinchOutChallenge:Challenge {
   
-  override init(level: Level)
+  override init(level: LevelBase)
   {
     super.init(level: level)
     self.gesture = "pinchOut"
