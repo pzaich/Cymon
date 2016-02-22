@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2D2FD21C7AE236005DAEEE /* GameCompletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D2FD11C7AE236005DAEEE /* GameCompletionController.swift */; };
 		5E36A3DE1B14A9200041CA5A /* pinch-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E36A3DC1B14A9200041CA5A /* pinch-in.png */; };
 		5E36A3DF1B14A9200041CA5A /* pinch-in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */; };
 		5E479FB21AE9F2EE00B25DD1 /* TapChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		032C112C91CC15824029EC45 /* Pods_Cymon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cymon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A85D2766717958BCCFCD919 /* Pods-Cymon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cymon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cymon/Pods-Cymon.release.xcconfig"; sourceTree = "<group>"; };
+		5E2D2FD11C7AE236005DAEEE /* GameCompletionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCompletionController.swift; sourceTree = "<group>"; };
 		5E36A3DC1B14A9200041CA5A /* pinch-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in.png"; sourceTree = "<group>"; };
 		5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in@2x.png"; sourceTree = "<group>"; };
 		5E479FB11AE9F2EE00B25DD1 /* TapChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapChallenge.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				5EFCE6911ADCCCA300AF501A /* GameController.swift */,
 				5E97D62E1AD78922004DD3D0 /* MenuController.swift */,
+				5E2D2FD11C7AE236005DAEEE /* GameCompletionController.swift */,
 			);
 			indentWidth = 2;
 			path = Controllers;
@@ -513,6 +516,7 @@
 				5EADC4941AF6E5D7006F458C /* PinchInChallenge.swift in Sources */,
 				5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */,
 				5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */,
+				5E2D2FD21C7AE236005DAEEE /* GameCompletionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

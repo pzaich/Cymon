@@ -21,6 +21,10 @@ class GameController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  deinit {
+    print("closing game controller")
+  }
 
   @IBOutlet weak var gameScore: UILabel!
   @IBOutlet weak var gameStartTimeRemaining: UILabel!
@@ -226,6 +230,7 @@ class GameController: UIViewController {
       },
       callback: { () in
         print("game Over")
+        self.onLevelCompletion()
     })
   }
   
@@ -252,6 +257,12 @@ class GameController: UIViewController {
     } else {
       callback()
     }
+  }
+  
+  func onLevelCompletion()
+  {
+    challengeBoard.hidden = true
+    gameTimeRemaining.hidden = true
   }
   
 }
