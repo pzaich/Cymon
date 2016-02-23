@@ -8,7 +8,21 @@
 
 import Foundation
 
-class Level2:Level {
+protocol Levelable {
+  var duration:Int { get } //= 10
+  var challengeScore:Int { get }//= 0
+  var challengeDistribution:[String:Double] { get }//[String:Double]()
+  var totalChallenges:Int { get }
+}
+
+class Level2:Levelable {
+  
+  var duration:Int = 10
+  var challengeScore:Int = 0
+  var challengeDistribution:[String:Double] = [String:Double]()
+  var totalChallenges:Int = 0
+  
+  override var duration:Int = 10
   
   override init() {
     super.init()
