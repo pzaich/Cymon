@@ -200,11 +200,13 @@ class GameController: UIViewController {
       self.challengeBoard.isHidden = true
       self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(20.0), y: CGFloat(20.0))
     }, completion: { (finished: Bool) in
-      self.simonHead.isHidden = true
-      self.challengeBoard.isHidden = false
-      self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+      UIView.animate(withDuration: 0.5, animations: {
+        self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+      }, completion: { (finished: Bool) in
+        self.simonHead.isHidden = true
+        self.challengeBoard.isHidden = false
+      })
     })
-    
   }
   
   func handleSuccess() {
@@ -213,20 +215,6 @@ class GameController: UIViewController {
     removeOldGestures()
     setChallenge()
     animateChallenge()
-    
-//    [UIView animateWithDuration:1.0 animations:^{
-//      view.backgroundColor = [UIColor redColor];
-//      }];
-//    toggleGameElements()
-//    let originalColor = view.backgroundColor
-    
-//    UIView.animateWithDuration(2.0, delay: 0, options: .CurveEaseInOut, animations: {
-////      self.view.backgroundColor = UIColor(red: CGFloat(0.976), green: CGFloat(0.91), blue: CGFloat(0.337), alpha: CGFloat(0.5))
-//    }, completion: { finished in
-//      // proceed to next challenge
-//      self.setChallenge()
-////      self.view.backgroundColor = originalColor
-//    })
   }
   
   func initializeGame()
@@ -278,18 +266,18 @@ class GameController: UIViewController {
   
   func onLevelCompletion()
   {
-    challengeBoard.isHidden = true
-    gameTimeRemaining.isHidden = true
+//    challengeBoard.isHidden = true
+//    gameTimeRemaining.isHidden = true
     
-    if (game.nextChallenge() == nil) {
-//      showViewController(GameCompletionController(), sender: self)
-      
-
-    } else {
-      present(GameCompletionController(), animated: true, completion: nil)
-      
-    }
+    let gameCompletionController = GameCompletionController()
+    
+//    if (game.nextChallenge() == nil) {
+////      showViewController(GameCompletionController(), sender: self)
+//      
+//
+//    } else {
+//      
+//    }
+    present(gameCompletionController, animated: true, completion: nil)
   }
-
-  
 }
