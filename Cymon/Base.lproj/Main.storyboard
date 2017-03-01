@@ -6,11 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Bla.ttf">
+            <string>Lato-Black</string>
+        </array>
         <array key="Lato-Bol.ttf">
             <string>Lato-Bold</string>
         </array>
@@ -37,7 +39,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZVG-M8-GJR">
                                 <rect key="frame" x="146" y="48" width="85" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZVG-M8-GJR" secondAttribute="height" multiplier="85:87" id="Yc7-2B-7aL"/>
+                                    <constraint firstAttribute="height" constant="87" id="POO-l8-TlR"/>
+                                    <constraint firstAttribute="width" constant="85" id="rad-gb-4Hp"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-hA-FP7">
@@ -50,37 +53,34 @@
                                     <segue destination="Xi3-o8-Qha" kind="show" id="lXk-AH-2a8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWu-i8-tY1">
-                                <rect key="frame" x="194" y="153" width="50" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hWu-i8-tY1" secondAttribute="height" multiplier="50:21" id="MA2-H7-weR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CYMON" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-qK-qAm">
+                                <rect key="frame" x="9" y="148" width="193" height="44"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="36"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.65098039220000004" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="346-b4-GCQ">
-                                <rect key="frame" x="130" y="153" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Says" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="1t3-Cf-eoD">
+                                <rect key="frame" x="210" y="148" width="158" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="346-b4-GCQ" secondAttribute="height" multiplier="8:3" id="F6C-EE-y3J"/>
+                                    <constraint firstAttribute="width" constant="158" id="0qi-1l-1nc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="36"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.90980392160000001" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1175510436296463" green="0.11326006054878235" blue="0.054016560316085815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="P3d-hA-FP7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="323" id="CIa-ou-qKs"/>
-                            <constraint firstItem="P3d-hA-FP7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="97" id="D0C-vN-lTI"/>
-                            <constraint firstItem="346-b4-GCQ" firstAttribute="top" secondItem="ZVG-M8-GJR" secondAttribute="bottom" constant="18" id="Dyl-Cb-cLB"/>
-                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="130" id="HHu-ON-1Ji"/>
-                            <constraint firstItem="346-b4-GCQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="114" id="Hq0-dd-vcY"/>
-                            <constraint firstItem="hWu-i8-tY1" firstAttribute="leading" secondItem="346-b4-GCQ" secondAttribute="trailing" constant="8" id="KiI-Wb-IXz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZVG-M8-GJR" secondAttribute="trailing" constant="128" id="P7M-3z-3DQ"/>
-                            <constraint firstItem="hWu-i8-tY1" firstAttribute="top" secondItem="ZVG-M8-GJR" secondAttribute="bottom" constant="18" id="RcG-Gg-31h"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="P3d-hA-FP7" secondAttribute="trailing" constant="95" id="ovu-hR-gcK"/>
-                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="zdN-0I-tRx"/>
+                            <constraint firstItem="P3d-hA-FP7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="97" id="62K-KJ-Fuk"/>
+                            <constraint firstItem="1t3-Cf-eoD" firstAttribute="top" secondItem="ZVG-M8-GJR" secondAttribute="bottom" constant="13" id="Djy-AI-lgv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P3d-hA-FP7" secondAttribute="trailing" constant="95" id="QYJ-9C-5h2"/>
+                            <constraint firstItem="iJq-qK-qAm" firstAttribute="baseline" secondItem="1t3-Cf-eoD" secondAttribute="baseline" id="RWG-eY-QyO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1t3-Cf-eoD" secondAttribute="trailing" constant="-9" id="cFI-1e-mIj"/>
+                            <constraint firstItem="1t3-Cf-eoD" firstAttribute="leading" secondItem="iJq-qK-qAm" secondAttribute="trailing" constant="8" symbolic="YES" id="dnI-Q3-o67"/>
+                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="centerX" secondItem="P3d-hA-FP7" secondAttribute="centerX" id="eoJ-R1-uYI"/>
+                            <constraint firstItem="ZVG-M8-GJR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="nrF-lx-Mt4"/>
+                            <constraint firstItem="iJq-qK-qAm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-7" id="ue2-z5-Th7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="P3d-hA-FP7" secondAttribute="bottom" constant="276" id="uzE-UT-Lis"/>
                         </constraints>
                     </view>
                 </viewController>
