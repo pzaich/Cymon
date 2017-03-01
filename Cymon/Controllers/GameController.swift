@@ -269,15 +269,9 @@ class GameController: UIViewController {
 //    challengeBoard.isHidden = true
 //    gameTimeRemaining.isHidden = true
     
-    let gameCompletionController = GameCompletionController()
-    
-//    if (game.nextChallenge() == nil) {
-////      showViewController(GameCompletionController(), sender: self)
-//      
-//
-//    } else {
-//      
-//    }
+    let gameCompletionController = self.storyboard?.instantiateViewController(withIdentifier: "GameCompletion") as! GameCompletionController
     present(gameCompletionController, animated: true, completion: nil)
+    
+    
   }
 }

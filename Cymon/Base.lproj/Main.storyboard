@@ -54,13 +54,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CYMON" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-qK-qAm">
-                                <rect key="frame" x="9" y="148" width="193" height="44"/>
+                                <rect key="frame" x="9" y="148" width="193" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="36"/>
                                 <color key="textColor" red="0.70196078429999997" green="0.65098039220000004" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Says" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="1t3-Cf-eoD">
-                                <rect key="frame" x="210" y="148" width="158" height="44"/>
+                                <rect key="frame" x="210" y="148" width="158" height="43.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="0qi-1l-1nc"/>
                                 </constraints>
@@ -91,7 +91,7 @@
         <!--GameCompletionController-->
         <scene sceneID="OS9-8O-NHU">
             <objects>
-                <viewController title="GameCompletionController" id="t7h-F6-mpj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameCompletion" title="GameCompletionController" id="t7h-F6-mpj" customClass="GameCompletionController" customModule="Cymon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XKb-xG-5cG"/>
                         <viewControllerLayoutGuide type="bottom" id="zCR-cJ-XO1"/>
