@@ -1,17 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Lato-Bla.ttf">
+        <array key="Lato-Bla.ttf">
             <string>Lato-Black</string>
-        </mutableArray>
-        <mutableArray key="Lato-Lig.ttf">
+        </array>
+        <array key="Lato-Lig.ttf">
             <string>Lato-Light</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -22,34 +26,35 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CYMON" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
                     <rect key="frame" x="8" y="402" width="193" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="193" id="Pr4-Fk-J97"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="36"/>
-                    <color key="textColor" red="0.70196078431372544" green="0.65098039215686276" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.70196078431372544" green="0.65098039215686276" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo-large.png" highlightedImage="logo-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ksb-NC-Zh7">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-large.png" highlightedImage="logo-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ksb-NC-Zh7">
                     <rect key="frame" x="98" y="131" width="179" height="205"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="205" id="g9n-7V-Ogq"/>
+                        <constraint firstAttribute="height" constant="205" id="Ruh-re-xvx"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Says" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MmA-T7-u1q">
                     <rect key="frame" x="209" y="402" width="158" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="158" id="YWn-fV-D0l"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="36"/>
-                    <color key="textColor" red="0.97647058823529409" green="0.90980392156862744" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.97647058823529409" green="0.90980392156862744" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.11764705882352941" green="0.11372549019607843" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.089512154459953308" green="0.08785807341337204" blue="0.046877413988113403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="MmA-T7-u1q" firstAttribute="baseline" secondItem="kId-c2-rCX" secondAttribute="baseline" id="Amg-Fi-BLd"/>
-                <constraint firstItem="MmA-T7-u1q" firstAttribute="leading" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="8" symbolic="YES" id="Do1-hK-Yyr"/>
-                <constraint firstItem="MmA-T7-u1q" firstAttribute="top" secondItem="Ksb-NC-Zh7" secondAttribute="bottom" constant="66" id="GRa-eK-PaN"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="WHt-01-u9p"/>
-                <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="221" id="bnJ-GV-Xxp"/>
-                <constraint firstItem="MmA-T7-u1q" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="iMy-Qv-mNw"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="baseline" secondItem="MmA-T7-u1q" secondAttribute="baseline" id="D2j-aM-Bpz"/>
+                <constraint firstItem="Ksb-NC-Zh7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EKx-M1-5Fw"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="Ksb-NC-Zh7" secondAttribute="bottom" constant="66" id="JMY-Za-KO3"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="Mxp-pq-C2V"/>
+                <constraint firstItem="MmA-T7-u1q" firstAttribute="leading" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="8" symbolic="YES" id="Vse-kd-Yao"/>
+                <constraint firstItem="Ksb-NC-Zh7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="131" id="WWN-2W-7H7"/>
+                <constraint firstItem="MmA-T7-u1q" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="csl-tt-zfX"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -57,6 +62,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo-large.png" width="179" height="186"/>
+        <image name="logo-large.png" width="179" height="185"/>
     </resources>
 </document>

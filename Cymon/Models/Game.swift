@@ -22,7 +22,7 @@ class Game {
   func nextChallenge() -> Challenge?
   {
     if currentLevel!.challenges.count > 0 {
-      self.currentChallenge = currentLevel!.challenges.removeAtIndex(0)
+      self.currentChallenge = currentLevel!.challenges.remove(at: 0)
     } else {
       self.currentChallenge = nil
     }

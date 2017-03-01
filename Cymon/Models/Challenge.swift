@@ -23,7 +23,7 @@ class Challenge {
   var gestureInstruction:String?
   var challengeImage:String?
   
-  class func createChallenge (level:Level, type:String) -> Challenge {
+  class func createChallenge (_ level:Level, type:String) -> Challenge {
     var challengeInstance:Challenge?
     switch type {
     case "tap":

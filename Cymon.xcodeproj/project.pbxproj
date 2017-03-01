@@ -53,8 +53,7 @@
 		5EFCE6981ADE22AC00AF501A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6971ADE22AC00AF501A /* Game.swift */; };
 		5EFCE69A1ADE23B300AF501A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE6991ADE23B300AF501A /* Level.swift */; };
 		5EFCE69C1AE0B16800AF501A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCE69B1AE0B16800AF501A /* Challenge.swift */; };
-		90DA8BAF3E6D77CBF8A2CE8A /* Pods_Cymon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032C112C91CC15824029EC45 /* Pods_Cymon.framework */; };
-		D67C73D241AA35F782D993B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67299ACAF645A02F3D7D9B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B1A40F37128F5A7EE65BC994 /* Pods_Cymon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D0DDE4790B6563E8C29FF /* Pods_Cymon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		032C112C91CC15824029EC45 /* Pods_Cymon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cymon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A85D2766717958BCCFCD919 /* Pods-Cymon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cymon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cymon/Pods-Cymon.release.xcconfig"; sourceTree = "<group>"; };
 		5E2D2FD11C7AE236005DAEEE /* GameCompletionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCompletionController.swift; sourceTree = "<group>"; };
 		5E36A3DC1B14A9200041CA5A /* pinch-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in.png"; sourceTree = "<group>"; };
 		5E36A3DD1B14A9200041CA5A /* pinch-in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinch-in@2x.png"; sourceTree = "<group>"; };
@@ -121,7 +118,9 @@
 		5EFCE6991ADE23B300AF501A /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		5EFCE69B1AE0B16800AF501A /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		67299ACAF645A02F3D7D9B7C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A29F62155F537273525A3017 /* Pods-Cymon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cymon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cymon/Pods-Cymon.debug.xcconfig"; sourceTree = "<group>"; };
+		91F141A7CEC176803D096664 /* Pods-Cymon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cymon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cymon/Pods-Cymon.release.xcconfig"; sourceTree = "<group>"; };
+		9FA9E8F6B3B06AD5A8DD5375 /* Pods-Cymon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cymon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cymon/Pods-Cymon.debug.xcconfig"; sourceTree = "<group>"; };
+		B92D0DDE4790B6563E8C29FF /* Pods_Cymon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cymon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67C73D241AA35F782D993B5 /* Pods.framework in Frameworks */,
-				90DA8BAF3E6D77CBF8A2CE8A /* Pods_Cymon.framework in Frameworks */,
+				B1A40F37128F5A7EE65BC994 /* Pods_Cymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +188,7 @@
 				5E97D63F1AD78922004DD3D0 /* CymonTests */,
 				5E97D6281AD78922004DD3D0 /* Products */,
 				B2D3BFDB752053C6B46CF28B /* Frameworks */,
-				C74AF53403EA70B8BE2ABAF3 /* Pods */,
+				DBF8B6B9200C7B2DD8075C7A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,16 +306,16 @@
 			isa = PBXGroup;
 			children = (
 				67299ACAF645A02F3D7D9B7C /* Pods.framework */,
-				032C112C91CC15824029EC45 /* Pods_Cymon.framework */,
+				B92D0DDE4790B6563E8C29FF /* Pods_Cymon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C74AF53403EA70B8BE2ABAF3 /* Pods */ = {
+		DBF8B6B9200C7B2DD8075C7A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A29F62155F537273525A3017 /* Pods-Cymon.debug.xcconfig */,
-				2A85D2766717958BCCFCD919 /* Pods-Cymon.release.xcconfig */,
+				9FA9E8F6B3B06AD5A8DD5375 /* Pods-Cymon.debug.xcconfig */,
+				91F141A7CEC176803D096664 /* Pods-Cymon.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -329,12 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E97D6461AD78922004DD3D0 /* Build configuration list for PBXNativeTarget "Cymon" */;
 			buildPhases = (
-				DB6D1659A4AC192FF7565383 /* Check Pods Manifest.lock */,
+				2FDA2F18992E1A6E0C9E54BD /* [CP] Check Pods Manifest.lock */,
 				5E97D6231AD78922004DD3D0 /* Sources */,
 				5E97D6241AD78922004DD3D0 /* Frameworks */,
 				5E97D6251AD78922004DD3D0 /* Resources */,
-				DE3773795B4446C46BF3A2A4 /* Embed Pods Frameworks */,
-				B61AA3C15712F411E4A3FEFC /* Copy Pods Resources */,
+				52D50B0AEF9B9B6DF180ED7B /* [CP] Embed Pods Frameworks */,
+				9B4F3D555DB4C8C0E9787A56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,15 +368,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Paul Zaich";
 				TargetAttributes = {
 					5E97D6261AD78922004DD3D0 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = H7LL446M2U;
+						LastSwiftMigration = 0820;
 					};
 					5E97D63B1AD78922004DD3D0 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 5E97D6261AD78922004DD3D0;
 					};
 				};
@@ -451,49 +451,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B61AA3C15712F411E4A3FEFC /* Copy Pods Resources */ = {
+		2FDA2F18992E1A6E0C9E54BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cymon/Pods-Cymon-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DB6D1659A4AC192FF7565383 /* Check Pods Manifest.lock */ = {
+		52D50B0AEF9B9B6DF180ED7B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DE3773795B4446C46BF3A2A4 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cymon/Pods-Cymon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B4F3D555DB4C8C0E9787A56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cymon/Pods-Cymon-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -571,8 +571,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -616,8 +618,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -633,44 +637,47 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		5E97D6471AD78922004DD3D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A29F62155F537273525A3017 /* Pods-Cymon.debug.xcconfig */;
+			baseConfigurationReference = 9FA9E8F6B3B06AD5A8DD5375 /* Pods-Cymon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Cymon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		5E97D6481AD78922004DD3D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A85D2766717958BCCFCD919 /* Pods-Cymon.release.xcconfig */;
+			baseConfigurationReference = 91F141A7CEC176803D096664 /* Pods-Cymon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Cymon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -690,6 +697,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cymon.app/Cymon";
 			};
 			name = Debug;
@@ -706,6 +714,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cymon.app/Cymon";
 			};
 			name = Release;

@@ -22,7 +22,7 @@ class GameController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  deinit {
+  override func viewDidDisappear(_ animated: Bool) {
     print("closing game controller")
   }
 
@@ -39,28 +39,30 @@ class GameController: UIViewController {
   @IBOutlet weak var gameheader: UIView!
   @IBOutlet weak var challengesRemainingLabel: UILabel!
   
+  @IBOutlet weak var simonHead: UIImageView!
   let game:Game = Game()
   
   @IBAction func cancel()
   {
-    let refreshAlert = UIAlertController(title: "Quit game", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.Alert)
+    let refreshAlert = UIAlertController(title: "Quit game", message: "Are you sure you want to leave?", preferredStyle: UIAlertControllerStyle.alert)
     
-    refreshAlert.addAction(UIAlertAction(title: "Leave", style: .Default, handler: { (action: UIAlertAction!) in
-        self.dismissViewControllerAnimated(true, completion: nil)
+    refreshAlert.addAction(UIAlertAction(title: "Leave", style: .default, handler: { (action: UIAlertAction!) in
+        self.dismiss(animated: true, completion: nil)
     }))
     
-    refreshAlert.addAction(UIAlertAction(title: "Stay", style: .Default, handler: { (action: UIAlertAction!) in
+    refreshAlert.addAction(UIAlertAction(title: "Stay", style: .default, handler: { (action: UIAlertAction!) in
         print("Handle Cancel Logic here")
     }))
     
-    presentViewController(refreshAlert, animated: true, completion: nil)
+    present(refreshAlert, animated: true, completion: nil)
   }
   
   func toggleGameElements()
   {
-    gameheader.hidden = !gameheader.hidden
-    challengeBoard.hidden = !challengeBoard.hidden
-    gameTimeRemaining.hidden = !gameTimeRemaining.hidden
+    gameheader.isHidden = !gameheader.isHidden
+    challengeBoard.isHidden = !challengeBoard.isHidden
+    gameTimeRemaining.isHidden = !gameTimeRemaining.isHidden
+    simonHead.isHidden = true
   }
   
   func setChallenge()
@@ -76,21 +78,21 @@ class GameController: UIViewController {
         case "tap":
           let gesture = UILongPressGestureRecognizer()
           gesture.minimumPressDuration = 0.01
-          gesture.addTarget(self, action: "handleTapChallenge:")
+          gesture.addTarget(self, action: #selector(GameController.handleTapChallenge(_:)))
           return gesture
         case "pinchOut":
           print("pinch out!")
           let gesture = UIPinchGestureRecognizer()
-          gesture.addTarget(self, action: "handlePinchInChallenge:")
+          gesture.addTarget(self, action: #selector(GameController.handlePinchInChallenge(_:)))
           return gesture
         case "pinchIn":
           print("pinch in!")
           let gesture = UIPinchGestureRecognizer()
-          gesture.addTarget(self, action: "handlePinchOutChallenge:")
+          gesture.addTarget(self, action: #selector(GameController.handlePinchOutChallenge(_:)))
           return gesture
         case "swipeUp":
           let gestureRecognizer = UISwipeGestureRecognizer()
-          gestureRecognizer.direction = UISwipeGestureRecognizerDirection.Down
+          gestureRecognizer.direction = UISwipeGestureRecognizerDirection.down
           return gestureRecognizer
         default:
           return nil
@@ -105,55 +107,55 @@ class GameController: UIViewController {
     }
   }
   
-  func handlePinchOutChallenge(sender: UIPinchGestureRecognizer) {
-    if sender.state == .Began && Float(sender.scale) > 1.0 {
+  func handlePinchOutChallenge(_ sender: UIPinchGestureRecognizer) {
+    if sender.state == .began && Float(sender.scale) > 1.0 {
       let multiplier:Float = 1.5
       let transformScale = multiplier * Float(sender.scale)
-      challengeImage.transform = CGAffineTransformScale(challengeImage.transform, CGFloat(transformScale), CGFloat(transformScale))
+      challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
       sender.scale = 1
     }
     
     //reset initial scaling
-    if sender.state == .Cancelled || sender.state == .Ended {
-      challengeImage.transform = CGAffineTransformMakeScale(CGFloat(1.0), CGFloat(1.0))
+    if sender.state == .cancelled || sender.state == .ended {
+      challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
     }
     
-    if sender.state == .Ended && Float(sender.scale) > 2.0  {
+    if sender.state == .ended && Float(sender.scale) > 2.0  {
       onGestureSuccess()
-    } else if sender.state == .Ended {
+    } else if sender.state == .ended {
       wiggle(challengeImage)
     }
   }
   
-  func handlePinchInChallenge(sender: UIPinchGestureRecognizer) {
-    if (sender.state == .Began) && (Float(sender.scale) < 1.0)  {
+  func handlePinchInChallenge(_ sender: UIPinchGestureRecognizer) {
+    if (sender.state == .began) && (Float(sender.scale) < 1.0)  {
       let multiplier:Float = 5.0
       let transformScale = Float(sender.scale) / multiplier
-      challengeImage.transform = CGAffineTransformScale(challengeImage.transform, CGFloat(transformScale), CGFloat(transformScale))
+      challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
       sender.scale = 1
     }
     
     //reset initial scaling
-    if sender.state == .Cancelled || sender.state == .Ended {
-      challengeImage.transform = CGAffineTransformMakeScale(CGFloat(1.0), CGFloat(1.0))
+    if sender.state == .cancelled || sender.state == .ended {
+      challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
     }
     
-    if sender.state == .Ended && Float(sender.scale) < 0.8  {
+    if sender.state == .ended && Float(sender.scale) < 0.8  {
       onGestureSuccess()
-    } else if sender.state == .Ended {
+    } else if sender.state == .ended {
       wiggle(challengeImage)
     }
   }
   
-  func handleTapChallenge(sender: UILongPressGestureRecognizer) {
+  func handleTapChallenge(_ sender: UILongPressGestureRecognizer) {
     let challenge = game.currentChallenge as! TapChallenge
 
-    if sender.state == .Ended {
+    if sender.state == .ended {
       challengeImage.image = UIImage(named: challenge.challengeImage!)
       onGestureSuccess()
     }
 
-    if sender.state == .Began {
+    if sender.state == .began {
       challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
     }
     
@@ -171,7 +173,7 @@ class GameController: UIViewController {
     }
   }
   
-  func appendScore(challenge: Challenge)
+  func appendScore(_ challenge: Challenge)
   {
     let score:Int = Int(gameScore.text!)!
     gameScore.text = "\(score + game.currentLevel!.challengeScore)"
@@ -181,14 +183,28 @@ class GameController: UIViewController {
     challengesRemainingLabel.text = "\(game.currentLevel!.challenges.count) left"
   }
   
-  func wiggle( challengeImage: UIImageView ) {
+  func wiggle( _ challengeImage: UIImageView ) {
     let animation = CABasicAnimation(keyPath: "position")
     animation.duration = 0.07
     animation.repeatCount = 2
     animation.autoreverses = true
-    animation.fromValue = NSValue(CGPoint: CGPointMake(challengeImage.center.x - 5, challengeImage.center.y))
-    animation.toValue = NSValue(CGPoint: CGPointMake(challengeImage.center.x + 5, challengeImage.center.y))
-    challengeImage.layer.addAnimation(animation, forKey: "position")
+    animation.fromValue = NSValue(cgPoint: CGPoint(x: challengeImage.center.x - 5, y: challengeImage.center.y))
+    animation.toValue = NSValue(cgPoint: CGPoint(x: challengeImage.center.x + 5, y: challengeImage.center.y))
+    challengeImage.layer.add(animation, forKey: "position")
+  }
+  
+  func animateChallenge() {
+    self.simonHead.isHidden = false
+    
+    UIView.animate(withDuration: 0.5, animations: {
+      self.challengeBoard.isHidden = true
+      self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(20.0), y: CGFloat(20.0))
+    }, completion: { (finished: Bool) in
+      self.simonHead.isHidden = true
+      self.challengeBoard.isHidden = false
+      self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+    })
+    
   }
   
   func handleSuccess() {
@@ -196,6 +212,7 @@ class GameController: UIViewController {
     appendChallengesRemainingCount()
     removeOldGestures()
     setChallenge()
+    animateChallenge()
     
 //    [UIView animateWithDuration:1.0 animations:^{
 //      view.backgroundColor = [UIColor redColor];
@@ -226,7 +243,7 @@ class GameController: UIViewController {
   {
     countDown(gameTimeRemaining,
       timer: { () in
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameTimeRemainingCountDown", userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameController.gameTimeRemainingCountDown), userInfo: nil, repeats: false)
       },
       callback: { () in
         print("game Over")
@@ -238,15 +255,15 @@ class GameController: UIViewController {
   {
     countDown(gameStartTimeRemaining,
       timer: { () in
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "gameStartCountDown", userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameController.gameStartCountDown), userInfo: nil, repeats: false)
       },
       callback: { () in
         self.initializeGame()
-        self.gameStartTimeRemaining.hidden = true
+        self.gameStartTimeRemaining.isHidden = true
     })
   }
   
-  func countDown(label:UILabel, timer:() -> Void, callback:() -> Void)
+  func countDown(_ label:UILabel, timer:() -> Void, callback:() -> Void)
   {
     let count = label.text!
     let newCount = Int(count)! - 1
@@ -261,8 +278,18 @@ class GameController: UIViewController {
   
   func onLevelCompletion()
   {
-    challengeBoard.hidden = true
-    gameTimeRemaining.hidden = true
+    challengeBoard.isHidden = true
+    gameTimeRemaining.isHidden = true
+    
+    if (game.nextChallenge() == nil) {
+//      showViewController(GameCompletionController(), sender: self)
+      
+
+    } else {
+      present(GameCompletionController(), animated: true, completion: nil)
+      
+    }
   }
+
   
 }

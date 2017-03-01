@@ -1,6 +1,5 @@
 source 'https://github.com/CocoaPods/Specs'
-platform :ios, '8.0'
-link_with 'Cymon'
+platform :ios, '10.0'
 
 target 'Cymon' do
   pod 'Dollar'
