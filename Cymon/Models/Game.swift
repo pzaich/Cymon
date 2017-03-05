@@ -21,13 +21,18 @@ class Game {
     currentGame = nil
   }
   
-  var nextLevel:Int = 1
+  var nextLevel:Int = 0
   var currentLevel:Level?
   var currentChallenge:Challenge?
   
+  func getNextLevel() {
+    self.nextLevel += 1
+    self.currentLevel = Level.createLevel(nextLevel)
+  }
+  
   func start()
   {
-    self.currentLevel = Level.createLevel(nextLevel)
+    self.getNextLevel()
   }
   
   func nextChallenge() -> Challenge?

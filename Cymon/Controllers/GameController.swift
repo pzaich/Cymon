@@ -219,6 +219,10 @@ class GameController: UIViewController {
     removeOldGestures()
     setChallenge()
     animateChallenge()
+    
+    if game.currentLevel!.challenges.count == 0 {
+      onLevelCompletion()
+    }
   }
   
   func initializeGame()
@@ -239,7 +243,7 @@ class GameController: UIViewController {
       },
       callback: { () in
         print("game Over")
-        self.onLevelCompletion()
+        self.onLevelFailure()
     })
   }
   
@@ -268,7 +272,12 @@ class GameController: UIViewController {
     }
   }
   
-  func onLevelCompletion()
+  func onLevelCompletion() {
+    let LevelInterludeController = self.storyboard?.instantiateViewController(withIdentifier: "LevelInterludeController") as! LevelInterludeController
+    present(LevelInterludeController, animated: true, completion: nil)
+  }
+  
+  func onLevelFailure()
   {
     let gameCompletionController = self.storyboard?.instantiateViewController(withIdentifier: "GameCompletion") as! GameCompletionController
     present(gameCompletionController, animated: true, completion: nil)
