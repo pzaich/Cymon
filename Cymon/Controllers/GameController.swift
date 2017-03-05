@@ -15,6 +15,8 @@ class GameController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     gameStartCountDown()
     toggleGameElements()
+    
+    game = Game.createOrGetCurrent()
   }
 
   override func didReceiveMemoryWarning() {
@@ -40,7 +42,9 @@ class GameController: UIViewController {
   @IBOutlet weak var challengesRemainingLabel: UILabel!
   
   @IBOutlet weak var simonHead: UIImageView!
-  let game:Game = Game()
+  
+  // ivars
+  var game:Game!
   
   @IBAction func cancel()
   {
@@ -266,12 +270,7 @@ class GameController: UIViewController {
   
   func onLevelCompletion()
   {
-//    challengeBoard.isHidden = true
-//    gameTimeRemaining.isHidden = true
-    
     let gameCompletionController = self.storyboard?.instantiateViewController(withIdentifier: "GameCompletion") as! GameCompletionController
     present(gameCompletionController, animated: true, completion: nil)
-    
-    
   }
 }

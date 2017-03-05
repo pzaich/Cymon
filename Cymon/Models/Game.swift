@@ -10,6 +10,17 @@ import Foundation
 
 class Game {
   
+  static var currentGame:Game?
+  
+  class func createOrGetCurrent() -> Game {
+    currentGame = Game()
+    return currentGame!
+  }
+  
+  class func releaseCurrent() {
+    currentGame = nil
+  }
+  
   var nextLevel:Int = 1
   var currentLevel:Level?
   var currentChallenge:Challenge?

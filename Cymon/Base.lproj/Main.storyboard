@@ -54,13 +54,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CYMON" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="iJq-qK-qAm">
-                                <rect key="frame" x="9" y="148" width="193" height="43.5"/>
+                                <rect key="frame" x="9" y="148" width="193" height="44"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="36"/>
                                 <color key="textColor" red="0.70196078429999997" green="0.65098039220000004" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Says" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="1t3-Cf-eoD">
-                                <rect key="frame" x="210" y="148" width="158" height="43.5"/>
+                                <rect key="frame" x="210" y="148" width="158" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="0qi-1l-1nc"/>
                                 </constraints>
@@ -100,49 +100,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VGP-Fw-CR4">
-                                <rect key="frame" x="145" y="51" width="85" height="87"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="rtY-It-yxQ"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have failed me." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ay-Sb-kKO">
-                                <rect key="frame" x="12" y="196" width="351" height="21"/>
+                                <rect key="frame" x="12" y="196" width="331" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="fal-lI-oCt"/>
+                                    <constraint firstAttribute="height" constant="21" id="nNz-yB-6HB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.89019607840000003" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-Oj-wvZ">
-                                <rect key="frame" x="112" y="304" width="151" height="48"/>
+                                <rect key="frame" x="112" y="304" width="131" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="74b-gL-kaq"/>
+                                    <constraint firstAttribute="height" constant="48" id="BoF-sT-MKI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                 <state key="normal" title="Try Again?">
                                     <color key="titleColor" red="0.70196078429999997" green="0.65098039220000004" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xo1-Cu-kte">
+                                <rect key="frame" x="135" y="64" width="85" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="1fo-Vl-cml"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VGP-Fw-CR4" firstAttribute="top" secondItem="XKb-xG-5cG" secondAttribute="bottom" constant="31" id="0Ey-8O-3BU"/>
-                            <constraint firstItem="2ay-Sb-kKO" firstAttribute="top" secondItem="VGP-Fw-CR4" secondAttribute="bottom" constant="58" id="9ig-zD-TlV"/>
-                            <constraint firstItem="2ay-Sb-kKO" firstAttribute="leading" secondItem="aGs-x0-xbQ" secondAttribute="leadingMargin" constant="-4" id="H7F-6H-fn9"/>
-                            <constraint firstItem="hsj-Oj-wvZ" firstAttribute="top" secondItem="2ay-Sb-kKO" secondAttribute="bottom" constant="87" id="LXV-YD-ngm"/>
-                            <constraint firstItem="2ay-Sb-kKO" firstAttribute="centerX" secondItem="hsj-Oj-wvZ" secondAttribute="centerX" id="OrO-3K-AJa"/>
-                            <constraint firstItem="hsj-Oj-wvZ" firstAttribute="leading" secondItem="aGs-x0-xbQ" secondAttribute="leadingMargin" constant="96" id="a3Y-3b-Ivh"/>
-                            <constraint firstItem="VGP-Fw-CR4" firstAttribute="centerX" secondItem="aGs-x0-xbQ" secondAttribute="centerX" id="sXn-fM-DBm"/>
-                            <constraint firstItem="zCR-cJ-XO1" firstAttribute="top" secondItem="hsj-Oj-wvZ" secondAttribute="bottom" constant="315" id="y0R-xi-xcj"/>
-                            <constraint firstItem="VGP-Fw-CR4" firstAttribute="centerX" secondItem="2ay-Sb-kKO" secondAttribute="centerX" id="yKm-dG-ACc"/>
+                            <constraint firstItem="xo1-Cu-kte" firstAttribute="top" secondItem="XKb-xG-5cG" secondAttribute="bottom" constant="44" id="3I7-Sl-l3U"/>
+                            <constraint firstItem="zCR-cJ-XO1" firstAttribute="top" secondItem="hsj-Oj-wvZ" secondAttribute="bottom" constant="315" id="5HE-2e-eyT"/>
+                            <constraint firstItem="2ay-Sb-kKO" firstAttribute="top" secondItem="xo1-Cu-kte" secondAttribute="bottom" constant="45" id="5JS-NR-KXK"/>
+                            <constraint firstItem="hsj-Oj-wvZ" firstAttribute="leading" secondItem="aGs-x0-xbQ" secondAttribute="leadingMargin" constant="96" id="PDV-2g-MIR"/>
+                            <constraint firstItem="xo1-Cu-kte" firstAttribute="centerX" secondItem="2ay-Sb-kKO" secondAttribute="centerX" id="RwK-Ag-U8f"/>
+                            <constraint firstItem="2ay-Sb-kKO" firstAttribute="centerX" secondItem="hsj-Oj-wvZ" secondAttribute="centerX" id="Tbb-JO-yV8"/>
+                            <constraint firstItem="2ay-Sb-kKO" firstAttribute="leading" secondItem="aGs-x0-xbQ" secondAttribute="leadingMargin" constant="-4" id="TkT-Ni-7Ve"/>
+                            <constraint firstItem="hsj-Oj-wvZ" firstAttribute="top" secondItem="2ay-Sb-kKO" secondAttribute="bottom" constant="87" id="dlw-EX-cmW"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pf1-v8-juw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2551" y="367"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dPV-3B-OmA">
+            <objects>
+                <viewController id="2m6-Nu-Zh0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5nN-td-mDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ppg-D7-cVU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BLE-LS-J9S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgq-sc-9NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550" y="1083"/>
         </scene>
         <!--GameController-->
         <scene sceneID="eBe-Zp-vhd">
