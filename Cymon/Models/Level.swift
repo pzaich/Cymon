@@ -39,8 +39,10 @@ class Level {
   {
     var levelInstance:Level?
       switch level {
-        case 1:
-          levelInstance = Level1()
+      case 1:
+        levelInstance = Level1()
+      case 2:
+        levelInstance = Level2()
       default: break
     }
     return levelInstance!

@@ -273,6 +273,8 @@ class GameController: UIViewController {
   }
   
   func onLevelCompletion() {
+    // cancel timer
+    
     let LevelInterludeController = self.storyboard?.instantiateViewController(withIdentifier: "LevelInterludeController") as! LevelInterludeController
     present(LevelInterludeController, animated: true, completion: nil)
   }
