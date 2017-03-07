@@ -16,6 +16,7 @@ class Level {
   var challengeDistribution:[String:Double] = [String:Double]()
   var totalChallenges:Int = 0
   
+  
   //  batch create according to ratios
   // http://gamedev.stackexchange.com/questions/81986/how-to-generate-arrays-of-item-types-knowing-just-the-ratio-of-distribution
   lazy var challenges:[Challenge] = {
@@ -46,5 +47,9 @@ class Level {
       default: break
     }
     return levelInstance!
+  }
+  
+  func toS() -> String {
+    return String(describing: self)
   }
 }

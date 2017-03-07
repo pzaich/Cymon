@@ -13,8 +13,14 @@ class Game {
   static var currentGame:Game?
   
   class func createOrGetCurrent() -> Game {
-    currentGame = Game()
-    return currentGame!
+    if let game = currentGame {
+      return game
+    } else {
+      let game = Game()
+      self.currentGame = game
+      return game
+    }
+    
   }
   
   class func releaseCurrent() {

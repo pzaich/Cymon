@@ -255,6 +255,7 @@ class GameController: UIViewController {
       },
       callback: { () in
         self.initializeGame()
+        print(self.game.currentLevel!.toS())
         self.gameStartTimeRemaining.isHidden = true
     })
   }
