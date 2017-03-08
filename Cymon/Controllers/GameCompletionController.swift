@@ -13,6 +13,10 @@ class GameCompletionController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    if let game = Game.currentGame {
+      scoreLabel.text = "\(game.score)"
+    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -24,5 +28,7 @@ class GameCompletionController: UIViewController {
     Game.releaseCurrent()
     super.viewDidDisappear(animated)
   }
+  
+  @IBOutlet weak var scoreLabel: UILabel!
 }
 

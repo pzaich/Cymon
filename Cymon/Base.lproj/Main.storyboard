@@ -158,6 +158,9 @@
                             <constraint firstItem="2ay-Sb-kKO" firstAttribute="centerX" secondItem="bLI-5S-od3" secondAttribute="centerX" id="z9s-Rp-9QP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="bLI-5S-od3" id="J43-ZW-2dS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pf1-v8-juw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

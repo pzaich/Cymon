@@ -179,8 +179,8 @@ class GameController: UIViewController {
   
   func appendScore(_ challenge: Challenge)
   {
-    let score:Int = Int(gameScore.text!)!
-    gameScore.text = "\(score + game.currentLevel!.challengeScore)"
+    game.incrementScoreBy(game.currentLevel!.challengeScore)
+    gameScore.text = "\(game.score)"
   }
   
   func appendChallengesRemainingCount() {

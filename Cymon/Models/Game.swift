@@ -26,6 +26,7 @@ class Game {
   }
   
   var nextLevel:Int = 0
+  var score = 0
   var currentLevel:Level?
   var currentChallenge:Challenge?
   
@@ -37,6 +38,10 @@ class Game {
   func start()
   {
     self.getNextLevel()
+  }
+  
+  func incrementScoreBy(_ addedScore:Int) {
+    self.score += addedScore
   }
   
   func nextChallenge() -> Challenge?
