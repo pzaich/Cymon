@@ -36,7 +36,7 @@ class Level {
     return $.shuffle(placeholder)
   }()
   
-  class func createLevel (_ level:Int)-> Level
+  class func createLevel (_ level:Int)-> Level?
   {
     var levelInstance:Level?
       switch level {
@@ -46,10 +46,10 @@ class Level {
         levelInstance = Level2()
       default: break
     }
-    return levelInstance!
+    return levelInstance
   }
   
-  func toS() -> String {
+  func toS () -> String {
     return String(describing: self)
   }
 }

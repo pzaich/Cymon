@@ -9,7 +9,6 @@
 import Foundation
 
 class Game {
-  
   static var currentGame:Game?
   
   class func createOrGetCurrent() -> Game {
@@ -20,7 +19,6 @@ class Game {
       self.currentGame = game
       return game
     }
-    
   }
   
   class func releaseCurrent() {

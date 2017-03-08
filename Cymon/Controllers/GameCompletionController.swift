@@ -20,6 +20,9 @@ class GameCompletionController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  
+  override func viewDidDisappear(_ animated: Bool) {
+    Game.releaseCurrent()
+    super.viewDidDisappear(animated)
+  }
 }
 
