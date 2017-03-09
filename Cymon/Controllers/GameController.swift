@@ -209,6 +209,14 @@ class GameController: UIViewController {
       }, completion: { (finished: Bool) in
         self.simonHead.isHidden = true
         self.challengeBoard.isHidden = false
+        
+        UIView.animate(withDuration: 0.15, animations: {
+          self.gameScore.transform = CGAffineTransform(scaleX: CGFloat(1.4), y: CGFloat(1.4))
+        }, completion: { (finished: Bool) in
+          UIView.animate(withDuration: 0.15, animations: {
+            self.gameScore.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+          })
+        })
       })
     })
   }
