@@ -228,7 +228,7 @@ class GameController: UIViewController {
     setChallenge()
     animateChallenge()
     
-    if game.currentLevel!.challenges.count == 0 {
+    if game.currentChallenge == nil {
       onLevelCompletion()
     }
   }
@@ -236,6 +236,7 @@ class GameController: UIViewController {
   func initializeGame()
   {
     game.start()
+//    print("\(game.currentLevel!)")
     toggleGameElements()
     gameTimeRemaining.text = "\(game.currentLevel!.duration)"
     gameTimeRemainingCountDown()
