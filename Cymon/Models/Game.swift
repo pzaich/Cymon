@@ -25,14 +25,14 @@ class Game {
     currentGame = nil
   }
   
-  var nextLevel:Int = 0
+  var nextLevel:Int = 1
   var score = 0
   var currentLevel:Level?
   var currentChallenge:Challenge?
   
   func getNextLevel() {
-    self.nextLevel += 1
     self.currentLevel = Level.createLevel(nextLevel)
+    self.nextLevel += 1
   }
   
   func start()

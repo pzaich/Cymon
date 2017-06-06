@@ -12,7 +12,7 @@ class Level2:Level {
   
   override init() {
     super.init()
-    self.duration = 10
+    self.duration = 20
     self.challengeScore = 11
     self.totalChallenges = 15
     self.challengeDistribution = [

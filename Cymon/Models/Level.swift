@@ -38,15 +38,14 @@ class Level {
   
   class func createLevel (_ level:Int)-> Level?
   {
-    var levelInstance:Level?
-      switch level {
-      case 1:
-        levelInstance = Level1()
-      case 2:
-        levelInstance = Level2()
-      default: break
+    switch level {
+    case 1:
+      return Level1()
+    case 2:
+      return Level2()
+    default:
+      return nil
     }
-    return levelInstance
   }
   
   func toS () -> String {

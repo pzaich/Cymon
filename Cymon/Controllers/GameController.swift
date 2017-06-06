@@ -95,8 +95,9 @@ class GameController: UIViewController {
           gesture.addTarget(self, action: #selector(GameController.handlePinchOutChallenge(_:)))
           return gesture
         case "swipeUp":
-          let gestureRecognizer = UISwipeGestureRecognizer()
-          gestureRecognizer.direction = UISwipeGestureRecognizerDirection.down
+          let gestureRecognizer = UIPanGestureRecognizer()
+          gestureRecognizer.minimumNumberOfTouches = 1
+          gestureRecognizer.addTarget(self, action: #selector(GameController.handleSwipe(_:)))
           return gestureRecognizer
         default:
           return nil
@@ -162,12 +163,43 @@ class GameController: UIViewController {
     if sender.state == .began {
       challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
     }
+  }
+  
+  
+  var initialYCoord:CGFloat?
+  var distanceTraveled:CGFloat = 0.0
+  func handleSwipe(_ sender: UIPanGestureRecognizer) {
+    let translation = sender.translation(in: self.view)
     
+    if sender.state == .began || sender.state == .changed {
+      if initialYCoord == nil {
+        distanceTraveled = 0.0
+        self.initialYCoord = challengeImage.center.y
+      }
+      
+      distanceTraveled += translation.y
+      
+      sender.view!.center = CGPoint(x: sender.view!.center.x, y: sender.view!.center.y + translation.y)
+      sender.setTranslation(CGPoint.zero, in: self.view)
+    }
+    
+    if sender.state == .ended, let initialYCoord = initialYCoord {
+      if distanceTraveled < -250 {
+        UIView.animate(withDuration: 0.15, animations: {
+          self.challengeImage.transform = CGAffineTransform(translationX: 0, y: -256)
+          self.onGestureSuccess()
+          self.challengeImage.transform = CGAffineTransform.identity
+        })
+      } else {
+        sender.view!.center = CGPoint(x: sender.view!.center.x, y: initialYCoord)
+        wiggle(challengeImage)
+      }
+      distanceTraveled = 0.0
+    }
   }
   
   func onGestureSuccess()
   {
-    print("gesture success")
     handleSuccess()
   }
   
@@ -236,7 +268,6 @@ class GameController: UIViewController {
   func initializeGame()
   {
     game.start()
-//    print("\(game.currentLevel!)")
     toggleGameElements()
     gameTimeRemaining.text = "\(game.currentLevel!.duration)"
     gameTimeRemainingCountDown()
@@ -251,7 +282,6 @@ class GameController: UIViewController {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameController.gameTimeRemainingCountDown), userInfo: nil, repeats: false)
       },
       callback: { () in
-        print("game Over")
         self.onLevelFailure()
     })
   }
@@ -264,7 +294,6 @@ class GameController: UIViewController {
       },
       callback: { () in
         self.initializeGame()
-        print(self.game.currentLevel!.toS())
         self.gameStartTimeRemaining.isHidden = true
     })
   }
