@@ -7,11 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 //convert to protocol
 class Challenge {
-  
-  
   init(level:Level)
   {
     self.level = level
@@ -37,6 +36,10 @@ class Challenge {
     default: break
     }
     return challengeInstance!
+  }
+  
+  func handler(_ sender:UIGestureRecognizer, challengeImage:UIImageView, onSuccess:() -> Void, onFail:(_ challengeImage:UIImageView) -> Void) {
+    print("Not Implemented")
   }
   
 }

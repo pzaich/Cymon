@@ -61,20 +61,17 @@ class GameController: UIViewController {
     present(refreshAlert, animated: true, completion: nil)
   }
   
-  func toggleGameElements()
-  {
+  func toggleGameElements() {
     gameheader.isHidden = !gameheader.isHidden
     challengeBoard.isHidden = !challengeBoard.isHidden
     gameTimeRemaining.isHidden = !gameTimeRemaining.isHidden
     simonHead.isHidden = true
   }
   
-  func setChallenge()
-  {
+  func setChallenge() {
     if let nextChallenge = game.nextChallenge() {
       
       challengeLabel.text = nextChallenge.gestureInstruction
-      print(nextChallenge.challengeImage!)
       challengeImage.image = UIImage(named: nextChallenge.challengeImage!)
 
       let gestureRecognizer:UIGestureRecognizer? = {
@@ -82,125 +79,27 @@ class GameController: UIViewController {
         case "tap":
           let gesture = UILongPressGestureRecognizer()
           gesture.minimumPressDuration = 0.01
-          gesture.addTarget(self, action: #selector(GameController.handleTapChallenge(_:)))
           return gesture
-        case "pinchOut":
-          print("pinch out!")
-          let gesture = UIPinchGestureRecognizer()
-          gesture.addTarget(self, action: #selector(GameController.handlePinchInChallenge(_:)))
-          return gesture
-        case "pinchIn":
-          print("pinch in!")
-          let gesture = UIPinchGestureRecognizer()
-          gesture.addTarget(self, action: #selector(GameController.handlePinchOutChallenge(_:)))
-          return gesture
+        case "pinchOut", "pinchIn":
+          return UIPinchGestureRecognizer()
         case "swipeUp":
-          let gestureRecognizer = UIPanGestureRecognizer()
-          gestureRecognizer.minimumNumberOfTouches = 1
-          gestureRecognizer.addTarget(self, action: #selector(GameController.handleSwipe(_:)))
-          return gestureRecognizer
+          let gesture = UIPanGestureRecognizer()
+          gesture.minimumNumberOfTouches = 1
+          return gesture
         default:
           return nil
         }
       }()
       
       if let gesture = gestureRecognizer {
+        gesture.addTarget(self, action: #selector(GameController.challengeHandler(_:)))
         challengeBoard.addGestureRecognizer(gesture)
       }
-    } else {
-      print("should call: level won!")
     }
   }
   
-  func handlePinchOutChallenge(_ sender: UIPinchGestureRecognizer) {
-    if sender.state == .began && Float(sender.scale) > 1.0 {
-      let multiplier:Float = 1.5
-      let transformScale = multiplier * Float(sender.scale)
-      challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
-      sender.scale = 1
-    }
-    
-    //reset initial scaling
-    if sender.state == .cancelled || sender.state == .ended {
-      challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
-    }
-    
-    if sender.state == .ended && Float(sender.scale) > 2.0  {
-      onGestureSuccess()
-    } else if sender.state == .ended {
-      wiggle(challengeImage)
-    }
-  }
-  
-  func handlePinchInChallenge(_ sender: UIPinchGestureRecognizer) {
-    if (sender.state == .began) && (Float(sender.scale) < 1.0)  {
-      let multiplier:Float = 5.0
-      let transformScale = Float(sender.scale) / multiplier
-      challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
-      sender.scale = 1
-    }
-    
-    //reset initial scaling
-    if sender.state == .cancelled || sender.state == .ended {
-      challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
-    }
-    
-    if sender.state == .ended && Float(sender.scale) < 0.8  {
-      onGestureSuccess()
-    } else if sender.state == .ended {
-      wiggle(challengeImage)
-    }
-  }
-  
-  func handleTapChallenge(_ sender: UILongPressGestureRecognizer) {
-    let challenge = game.currentChallenge as! TapChallenge
-
-    if sender.state == .ended {
-      challengeImage.image = UIImage(named: challenge.challengeImage!)
-      onGestureSuccess()
-    }
-
-    if sender.state == .began {
-      challengeImage.image = UIImage(named: challenge.challengeImageAnimation)
-    }
-  }
-  
-  
-  var initialYCoord:CGFloat?
-  var distanceTraveled:CGFloat = 0.0
-  func handleSwipe(_ sender: UIPanGestureRecognizer) {
-    let translation = sender.translation(in: self.view)
-    
-    if sender.state == .began || sender.state == .changed {
-      if initialYCoord == nil {
-        distanceTraveled = 0.0
-        self.initialYCoord = challengeImage.center.y
-      }
-      
-      distanceTraveled += translation.y
-      
-      sender.view!.center = CGPoint(x: sender.view!.center.x, y: sender.view!.center.y + translation.y)
-      sender.setTranslation(CGPoint.zero, in: self.view)
-    }
-    
-    if sender.state == .ended, let initialYCoord = initialYCoord {
-      if distanceTraveled < -250 {
-        UIView.animate(withDuration: 0.15, animations: {
-          self.challengeImage.transform = CGAffineTransform(translationX: 0, y: -256)
-          self.onGestureSuccess()
-          self.challengeImage.transform = CGAffineTransform.identity
-        })
-      } else {
-        sender.view!.center = CGPoint(x: sender.view!.center.x, y: initialYCoord)
-        wiggle(challengeImage)
-      }
-      distanceTraveled = 0.0
-    }
-  }
-  
-  func onGestureSuccess()
-  {
-    handleSuccess()
+  func challengeHandler(_ sender:UIGestureRecognizer) {
+    game.currentChallenge!.handler(sender, challengeImage: challengeImage, onSuccess: handleSuccess, onFail: handleFail)
   }
   
   func removeOldGestures() {
@@ -219,7 +118,7 @@ class GameController: UIViewController {
     challengesRemainingLabel.text = "\(game.currentLevel!.challenges.count) left"
   }
   
-  func wiggle( _ challengeImage: UIImageView ) {
+  func handleFail( _ challengeImage: UIImageView ) {
     let animation = CABasicAnimation(keyPath: "position")
     animation.duration = 0.07
     animation.repeatCount = 2
