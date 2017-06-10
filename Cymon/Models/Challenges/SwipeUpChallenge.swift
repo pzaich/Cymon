@@ -14,6 +14,7 @@ class SwipeUpChallenge:SwipeChallenge {
     self.gesture = "swipeUp"
     self.gestureInstruction = "Swipe up!"
     self.challengeImage = "swipe-up.png"
+    self.minimumNumberOfTouches = 1
   }
   
   let distanceThreshold:CGFloat = -250.0

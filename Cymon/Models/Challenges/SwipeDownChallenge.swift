@@ -15,6 +15,7 @@ class SwipeDownChallenge:SwipeChallenge {
     self.gesture = "swipeDown"
     self.gestureInstruction = "Swipe down!"
     self.challengeImage = "swipe-down.png"
+    self.minimumNumberOfTouches = 1
   }
   
   let distanceThreshold:CGFloat = 250.0

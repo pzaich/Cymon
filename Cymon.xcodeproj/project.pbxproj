@@ -206,7 +206,6 @@
 				5EADC4871AF44B8B006F458C /* SwipeRightChallenge.swift */,
 				5E479FB31AE9F2FC00B25DD1 /* PinchOutChallenge.swift */,
 				5EADC4891AF44CD3006F458C /* SwipeUpChallenge.swift */,
-				5EE3CC651EEBBE6100499CE1 /* SwipeChallenge.swift */,
 				5EADC4931AF6E5D7006F458C /* PinchInChallenge.swift */,
 				5EE3CC5D1EEBB92F00499CE1 /* SwipeDownChallenge.swift */,
 			);
@@ -320,6 +319,7 @@
 				5EFCE6971ADE22AC00AF501A /* Game.swift */,
 				5EFCE6991ADE23B300AF501A /* Level.swift */,
 				5EFCE69B1AE0B16800AF501A /* Challenge.swift */,
+				5EE3CC651EEBBE6100499CE1 /* SwipeChallenge.swift */,
 			);
 			indentWidth = 2;
 			path = Models;

@@ -11,6 +11,7 @@ import UIKit
 class SwipeChallenge:Challenge {
   var initialYCoord:CGFloat?
   var distanceTraveled:CGFloat = 0.0
+  var minimumNumberOfTouches = 2
   
   func isGestureSuccess() -> Bool {
     return false
