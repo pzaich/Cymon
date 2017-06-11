@@ -82,7 +82,7 @@ class GameController: UIViewController {
           return gesture
         case "pinchOut", "pinchIn":
           return UIPinchGestureRecognizer()
-        case "swipeUp", "swipeDown":
+        case "swipeUp", "swipeDown", "swipeRight", "swipeLeft":
           let challenge = nextChallenge as! SwipeChallenge
           let gesture = UIPanGestureRecognizer()
           gesture.minimumNumberOfTouches = challenge.minimumNumberOfTouches

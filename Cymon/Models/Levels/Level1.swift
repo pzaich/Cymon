@@ -16,8 +16,10 @@ class Level1:Level {
     self.challengeScore = 10
     self.totalChallenges = 12
     self.challengeDistribution = [
-        "swipeDown": 0.5,
-        "swipeUp": 0.5,
+        "doubleSwipeDown": 0.25,
+        "doubleSwipeUp": 0.25,
+        "doubleSwipeLeft": 0.25,
+        "doubleSwipeRight": 0.25
 //      "tap": 0.5,
 //      "pinchOut": 0.25,
 //      "pinchIn": 0.25

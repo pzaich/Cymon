@@ -7,12 +7,20 @@
 //
 import UIKit
 
-class SwipeRightChallenge:Challenge {
+class SwipeRightChallenge:SwipeChallenge {
   override init(level: Level)
   {
     super.init(level: level)
     self.gesture = "swipeRight"
     self.gestureInstruction = "Swipe right!"
-    self.challengeImage = "swipe-up.png"
+    self.challengeImage = "swipe-right.png"
+    self.minimumNumberOfTouches = 1
+    self.coordinate = "x"
+  }
+  
+  let distanceThreshold:CGFloat = 150.0
+  
+  override func isGestureSuccess() -> Bool {
+    return distanceTraveled > distanceThreshold
   }
 }

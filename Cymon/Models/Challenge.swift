@@ -35,6 +35,18 @@ class Challenge {
       challengeInstance = SwipeUpChallenge(level: level)
     case "swipeDown":
       challengeInstance = SwipeDownChallenge(level: level)
+    case "swipeLeft":
+      challengeInstance = SwipeLeftChallenge(level: level)
+    case "swipeRight":
+      challengeInstance = SwipeRightChallenge(level: level)
+    case "doubleSwipeUp":
+      challengeInstance = DoubleSwipeUpChallenge(level: level)
+    case "doubleSwipeDown":
+      challengeInstance = DoubleSwipeDownChallenge(level: level)
+    case "doubleSwipeLeft":
+      challengeInstance = DoubleSwipeLeftChallenge(level: level)
+    case "doubleSwipeRight":
+      challengeInstance = DoubleSwipeRightChallenge(level: level)
     default: break
     }
     return challengeInstance!

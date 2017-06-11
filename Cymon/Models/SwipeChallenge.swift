@@ -9,9 +9,10 @@
 import UIKit
 
 class SwipeChallenge:Challenge {
-  var initialYCoord:CGFloat?
+  var initialCoord:CGFloat?
   var distanceTraveled:CGFloat = 0.0
   var minimumNumberOfTouches = 2
+  var coordinate = "y"
   
   func isGestureSuccess() -> Bool {
     return false
@@ -22,18 +23,29 @@ class SwipeChallenge:Challenge {
     let translation = s.translation(in: s.view)
     
     if s.state == .began || s.state == .changed {
-      if initialYCoord == nil {
+      if initialCoord == nil {
         distanceTraveled = 0.0
-        self.initialYCoord = challengeImage.center.y
+        self.initialCoord = challengeImage.center.y
       }
       
-      distanceTraveled += translation.y
+      var x = s.view!.center.x
+      var y = s.view!.center.y
       
-      s.view!.center = CGPoint(x: s.view!.center.x, y: s.view!.center.y + translation.y)
+      if (coordinate == "y") {
+        y += translation.y
+        distanceTraveled += translation.y
+      } else if (coordinate == "x") {
+        x += translation.x
+        distanceTraveled += translation.x
+      }
+      
+      print(distanceTraveled)
+      
+      s.view!.center = CGPoint(x: x, y: y)
       s.setTranslation(CGPoint.zero, in: s.view)
     }
     
-    if s.state == .ended, let initialYCoord = initialYCoord {
+    if s.state == .ended, let initialYCoord = initialCoord {
       if isGestureSuccess() {
         UIView.animate(withDuration: 0.15, animations: {
           challengeImage.transform = CGAffineTransform(translationX: 0, y: -256)
