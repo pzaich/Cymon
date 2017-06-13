@@ -43,6 +43,12 @@ class Level {
       return Level1()
     case 2:
       return Level2()
+    case 3:
+      return Level3()
+    case 4:
+      return Level4()
+    case 5:
+      return Level5()
     default:
       return nil
     }

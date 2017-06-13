@@ -82,10 +82,11 @@ class GameController: UIViewController {
           return gesture
         case "pinchOut", "pinchIn":
           return UIPinchGestureRecognizer()
-        case "swipeUp", "swipeDown", "swipeRight", "swipeLeft":
+        case "swipeUp", "swipeDown", "swipeRight", "swipeLeft", "doubleSwipeUp", "doubleSwipeDown", "doubleSwipeLeft", "doubleSwipeRight":
           let challenge = nextChallenge as! SwipeChallenge
           let gesture = UIPanGestureRecognizer()
           gesture.minimumNumberOfTouches = challenge.minimumNumberOfTouches
+          gesture.maximumNumberOfTouches = challenge.minimumNumberOfTouches
           return gesture
         default:
           return nil
@@ -132,20 +133,20 @@ class GameController: UIViewController {
   func animateChallenge() {
     self.simonHead.isHidden = false
     
-    UIView.animate(withDuration: 0.5, animations: {
+    UIView.animate(withDuration: 0.35, animations: {
       self.challengeBoard.isHidden = true
       self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(20.0), y: CGFloat(20.0))
     }, completion: { (finished: Bool) in
-      UIView.animate(withDuration: 0.5, animations: {
+      UIView.animate(withDuration: 0.35, animations: {
         self.simonHead.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
       }, completion: { (finished: Bool) in
         self.simonHead.isHidden = true
         self.challengeBoard.isHidden = false
         
-        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: 0.10, animations: {
           self.gameScore.transform = CGAffineTransform(scaleX: CGFloat(1.4), y: CGFloat(1.4))
         }, completion: { (finished: Bool) in
-          UIView.animate(withDuration: 0.15, animations: {
+          UIView.animate(withDuration: 0.10, animations: {
             self.gameScore.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
           })
         })

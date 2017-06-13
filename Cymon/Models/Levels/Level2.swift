@@ -12,13 +12,13 @@ class Level2:Level {
   
   override init() {
     super.init()
-    self.duration = 20
-    self.challengeScore = 11
+    self.duration = 40
+    self.challengeScore = 20
     self.totalChallenges = 15
     self.challengeDistribution = [
-      "tap": 0.25,
-      "pinchOut": 0.25,
-      "pinchIn": 0.25,
+      "swipeDown": 0.25,
+      "swipeLeft": 0.25,
+      "swipeRight": 0.25,
       "swipeUp": 0.25
     ]
   }

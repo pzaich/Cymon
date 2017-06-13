@@ -22,6 +22,7 @@ class SwipeChallenge:Challenge {
     let s = sender as! UIPanGestureRecognizer
     let translation = s.translation(in: s.view)
     
+    
     if s.state == .began || s.state == .changed {
       if initialCoord == nil {
         distanceTraveled = 0.0
