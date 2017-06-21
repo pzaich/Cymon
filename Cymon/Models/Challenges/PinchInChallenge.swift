@@ -23,13 +23,19 @@ class PinchInChallenge:Challenge {
     if s.state == .began && Float(s.scale) > 1.0 {
       let multiplier:Float = 1.5
       let transformScale = multiplier * Float(s.scale)
-      challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
+      
+      UIView.animate(withDuration: 0.15, animations: {
+        challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
+      })
+      
       s.scale = 1
     }
     
     //reset initial scaling
     if s.state == .cancelled || s.state == .ended {
-      challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+      UIView.animate(withDuration: 0.15, animations: {
+        challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+      })
     }
     
     if sender.state == .ended && Float(s.scale) > 2.0  {

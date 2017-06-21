@@ -235,15 +235,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-FQ-uwI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBX-dS-ZAG">
-                                        <rect key="frame" x="8" y="19" width="28" height="29"/>
-                                        <state key="normal" image="logo-mini.png">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancel" destination="Xi3-o8-Qha" eventType="touchUpInside" id="gxm-Gp-bFt"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Img-FO-o6b">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="17"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                        <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-nx-KbP">
                                         <rect key="frame" x="325" y="19" width="42" height="29"/>
                                         <constraints>
@@ -253,12 +250,15 @@
                                         <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Img-FO-o6b">
-                                        <rect key="frame" x="0.0" y="22" width="375" height="17"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
-                                        <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBX-dS-ZAG">
+                                        <rect key="frame" x="8" y="19" width="28" height="29"/>
+                                        <state key="normal" image="logo-mini.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel" destination="Xi3-o8-Qha" eventType="touchUpInside" id="gxm-Gp-bFt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="mBX-dS-ZAG" firstAttribute="top" secondItem="Ya8-nx-KbP" secondAttribute="top" id="JdO-3M-R9g"/>

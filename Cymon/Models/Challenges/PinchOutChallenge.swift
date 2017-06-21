@@ -25,13 +25,18 @@ class PinchOutChallenge:Challenge {
     if (s.state == .began) && (Float(s.scale) < 1.0)  {
       let multiplier:Float = 5.0
       let transformScale = Float(s.scale) / multiplier
-      challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
+      
+      UIView.animate(withDuration: 0.15, animations: {
+        challengeImage.transform = challengeImage.transform.scaledBy(x: CGFloat(transformScale), y: CGFloat(transformScale))
+      })
       s.scale = 1
     }
-    
+    2
     //reset initial scaling
     if s.state == .cancelled || s.state == .ended {
-      challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+      UIView.animate(withDuration: 0.15, animations: {
+        challengeImage.transform = CGAffineTransform(scaleX: CGFloat(1.0), y: CGFloat(1.0))
+      })
     }
     
     if s.state == .ended && Float(s.scale) < 0.8  {

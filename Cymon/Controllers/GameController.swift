@@ -25,7 +25,6 @@ class GameController: UIViewController {
   }
   
   override func viewDidDisappear(_ animated: Bool) {
-    print("closing game controller")
   }
 
   @IBOutlet weak var gameScore: UILabel!
