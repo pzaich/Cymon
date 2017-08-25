@@ -232,45 +232,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-FQ-uwI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Img-FO-o6b">
-                                        <rect key="frame" x="0.0" y="22" width="375" height="17"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
-                                        <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-nx-KbP">
-                                        <rect key="frame" x="325" y="19" width="42" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="9NO-wZ-FxX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
-                                        <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBX-dS-ZAG">
-                                        <rect key="frame" x="8" y="19" width="28" height="29"/>
-                                        <state key="normal" image="logo-mini.png">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancel" destination="Xi3-o8-Qha" eventType="touchUpInside" id="gxm-Gp-bFt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="mBX-dS-ZAG" firstAttribute="top" secondItem="Ya8-nx-KbP" secondAttribute="top" id="JdO-3M-R9g"/>
-                                    <constraint firstItem="Img-FO-o6b" firstAttribute="leading" secondItem="CeH-FQ-uwI" secondAttribute="leading" id="LKq-dP-1GY"/>
-                                    <constraint firstAttribute="trailing" secondItem="Img-FO-o6b" secondAttribute="trailing" id="LOl-Tz-tEw"/>
-                                    <constraint firstItem="Ya8-nx-KbP" firstAttribute="trailing" secondItem="CeH-FQ-uwI" secondAttribute="trailingMargin" id="OGV-jJ-QVf"/>
-                                    <constraint firstItem="mBX-dS-ZAG" firstAttribute="top" secondItem="CeH-FQ-uwI" secondAttribute="top" constant="19" id="RVA-MU-GP6"/>
-                                    <constraint firstItem="mBX-dS-ZAG" firstAttribute="leading" secondItem="CeH-FQ-uwI" secondAttribute="leadingMargin" id="meK-aP-Sfg"/>
-                                    <constraint firstItem="Img-FO-o6b" firstAttribute="top" secondItem="CeH-FQ-uwI" secondAttribute="top" constant="22" id="neR-TH-x4s"/>
-                                    <constraint firstAttribute="bottom" secondItem="Img-FO-o6b" secondAttribute="bottom" constant="3" id="xtt-V8-BXk"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="jnj-Yk-iad">
                                 <rect key="frame" x="145" y="250" width="85" height="87"/>
                                 <constraints>
@@ -313,6 +274,45 @@
                                     <constraint firstItem="SXD-fn-sY1" firstAttribute="centerY" secondItem="Fbs-WL-WhR" secondAttribute="centerY" id="Wtm-tO-cko"/>
                                     <constraint firstAttribute="trailing" secondItem="SPI-Y9-Jka" secondAttribute="trailing" id="YyP-zN-CQM"/>
                                     <constraint firstItem="SXD-fn-sY1" firstAttribute="centerX" secondItem="SPI-Y9-Jka" secondAttribute="centerX" id="wgg-7p-HEZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-FQ-uwI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Img-FO-o6b">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="17"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                        <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-nx-KbP">
+                                        <rect key="frame" x="325" y="19" width="42" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="9NO-wZ-FxX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
+                                        <color key="textColor" red="0.64152336120605469" green="0.59382796287536621" blue="0.18479195237159729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBX-dS-ZAG">
+                                        <rect key="frame" x="8" y="19" width="28" height="29"/>
+                                        <state key="normal" image="logo-mini.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel" destination="Xi3-o8-Qha" eventType="touchUpInside" id="gxm-Gp-bFt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mBX-dS-ZAG" firstAttribute="top" secondItem="Ya8-nx-KbP" secondAttribute="top" id="JdO-3M-R9g"/>
+                                    <constraint firstItem="Img-FO-o6b" firstAttribute="leading" secondItem="CeH-FQ-uwI" secondAttribute="leading" id="LKq-dP-1GY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Img-FO-o6b" secondAttribute="trailing" id="LOl-Tz-tEw"/>
+                                    <constraint firstItem="Ya8-nx-KbP" firstAttribute="trailing" secondItem="CeH-FQ-uwI" secondAttribute="trailingMargin" id="OGV-jJ-QVf"/>
+                                    <constraint firstItem="mBX-dS-ZAG" firstAttribute="top" secondItem="CeH-FQ-uwI" secondAttribute="top" constant="19" id="RVA-MU-GP6"/>
+                                    <constraint firstItem="mBX-dS-ZAG" firstAttribute="leading" secondItem="CeH-FQ-uwI" secondAttribute="leadingMargin" id="meK-aP-Sfg"/>
+                                    <constraint firstItem="Img-FO-o6b" firstAttribute="top" secondItem="CeH-FQ-uwI" secondAttribute="top" constant="22" id="neR-TH-x4s"/>
+                                    <constraint firstAttribute="bottom" secondItem="Img-FO-o6b" secondAttribute="bottom" constant="3" id="xtt-V8-BXk"/>
                                 </constraints>
                             </view>
                         </subviews>

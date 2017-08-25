@@ -31,7 +31,7 @@ class PinchOutChallenge:Challenge {
       })
       s.scale = 1
     }
-    2
+    
     //reset initial scaling
     if s.state == .cancelled || s.state == .ended {
       UIView.animate(withDuration: 0.15, animations: {
